@@ -1,1 +1,1 @@
-# fschwartzer
+# Udacity Machine Learning Nanodegree
