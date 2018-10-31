@@ -1,7 +1,7 @@
 # Nanodegree Engenheiro de Machine Learning
 ## Proposta de projeto final
-Joe Udacity  
-31 de dezembro de 2050
+Fernando Roberto Schwartzer |
+31 de outubro de 2018
 
 ## Proposta
 _(aprox. 2-3 páginas)_
