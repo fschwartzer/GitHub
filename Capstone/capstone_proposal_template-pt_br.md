@@ -16,22 +16,23 @@ O problema consiste na previsão da atividade dada uma captura instantânea de d
 A intenção é registrar os dados do sensor e as atividades correspondentes para assuntos específicos, ajustar um modelo a partir desses dados e generalizar o modelo para classificar a atividade de novos assuntos não vistos a partir de seus dados de sensor.
 
 ### Conjuntos de dados e entradas
-O conjunto de dados utilizados no projeto (http://cs.unibo.it/projects/us-tm2017/download.html) foi desenvolvido na Universidade de Bolonha com o esforço de diferentes pessoas:
-Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it
-Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it
-Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it
-Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it
-Colaboradores anteriores
-Claudia Carpineti • Mestranda • e-mail: claudia.carpineti@studio.unibo.it
-Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it
-Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it 
-A coleta de dados foi controlada por um aplicativo Android em execução no telefone dos usuários enquanto eles realizavam atividades. Esse aplicativo, por meio de uma interface gráfica simples, permitiu que os voluntários gravassem seu nome, iniciassem e interrompessem a coleta de dados e rotulassem a atividade que estava sendo executada. Foi pedido aos usuários para usar o aplicativo durante atividades específicas, como caminhar, estar em um carro, em um trem, em um ônibus ou ficar parado. As atividades com estas abreviações:
-T M = {bus, car, train, still, walking} 
-O aplicativo registra cada evento do sensor com uma frequência máxima de 20 Hz. Os eventos ocorrem toda vez que um sensor detecta uma alteração nos parâmetros que está medindo, fornecendo quatro informações:
-•	o nome do sensor que acionou o evento;
-•	o timestamp do evento;
-•	a acurácia do evento;
-•	os dados brutos do sensor que acionaram o evento.
+<p>O conjunto de dados utilizados no projeto (http://cs.unibo.it/projects/us-tm2017/download.html) foi desenvolvido na Universidade de Bolonha com o esforço de diferentes pessoas:</p>
+- Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it
+- Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it
+- Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it
+- Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it
+<p>Colaboradores anteriores</p>
+- Claudia Carpineti • Mestranda • e-mail: claudia.carpineti@studio.unibo.it
+- Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it
+- Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it 
+<p>A coleta de dados foi controlada por um aplicativo Android em execução no telefone dos usuários enquanto eles realizavam atividades. Esse aplicativo, por meio de uma interface gráfica simples, permitiu que os voluntários gravassem seu nome, iniciassem e interrompessem a coleta de dados e rotulassem a atividade que estava sendo executada. Foi pedido aos usuários para usar o aplicativo durante atividades específicas, como caminhar, estar em um carro, em um trem, em um ônibus ou ficar parado. As atividades com estas abreviações:</p>
+<p>T M = {bus, car, train, still, walking}</p> 
+<p>O aplicativo registra cada evento do sensor com uma frequência máxima de 20 Hz. Os eventos ocorrem toda vez que um sensor detecta uma alteração nos parâmetros que está medindo, fornecendo quatro informações:</p>
+- o nome do sensor que acionou o evento;
+- o timestamp do evento;
+- a acurácia do evento;
+- os dados brutos do sensor que acionaram o evento.
+
 Id:
 Time:
 activityrecognition#0:
@@ -117,9 +118,12 @@ Existem duas abordagens principais para as redes neurais que são apropriadas pa
 
 Eles são modelos de redes neurais por convolução e modelos de redes neurais recorrentes.
 
-“Recomenda-se que a RNN e a LSTM reconheçam atividades curtas que tenham ordem natural, enquanto a CNN é melhor em inferir atividades repetitivas a longo prazo. A razão é que a RNN poderia fazer uso da relação de ordem do tempo entre as leituras do sensor, e a CNN é mais capaz de aprender recursos profundos contidos em padrões recursivos.”
-— Deep Learning for Sensor-based Activity Recognition: A Survey, 2018.
-
+<blockquote>
+  <p>
+    “Recomenda-se que a RNN e a LSTM reconheçam atividades curtas que tenham ordem natural, enquanto a CNN é melhor em inferir atividades repetitivas a longo prazo. A razão é que a RNN poderia fazer uso da relação de ordem do tempo entre as leituras do sensor, e a CNN é mais capaz de aprender recursos profundos contidos em padrões recursivos.”
+    </p>
+<p>— Deep Learning for Sensor-based Activity Recognition: A Survey, 2018.</p>
+ </blockquote>
 
 ### Modelo de referência (benchmark)
 O modelo de referência será o trabalho de detecção de modo de transporte realizado por equipe da Universidade de Bolonha, Itália:
