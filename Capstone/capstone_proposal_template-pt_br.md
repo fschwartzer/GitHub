@@ -4,7 +4,6 @@ Fernando Roberto Schwartzer |
 31 de outubro de 2018
 
 ## Proposta
-_(aprox. 2-3 páginas)_
 
 ### Histórico do assunto
 Identificar os modos de transporte através de observações dos usuários, ou observação do ambiente, é um tópico crescente de pesquisa, com muitas aplicações no planejamento da mobilidade urbana. A detecção do modo de transporte fornece informações para o diagnóstico do uso da malha viária, da ocupação do solo, do deslocamento de cargas e, principalmente, dos deslocamentos das pessoas nas cidades.
@@ -107,8 +106,12 @@ user:
 ### Descrição da solução
 Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.
 
-“[…], Os procedimentos de extração de características e construção de modelos são freqüentemente executados simultaneamente nos modelos de aprendizagem profunda. Os recursos podem ser aprendidos automaticamente através da rede, em vez de serem projetados manualmente. Além disso, a rede neural profunda também pode extrair uma representação de alto nível na camada profunda, o que a torna mais adequada para tarefas complexas de reconhecimento de atividades.”
-— Deep Learning for Sensor-based Activity Recognition: A Survey, 2018.
+<blockquote>
+  <p>
+   “[…], Os procedimentos de extração de características e construção de modelos são freqüentemente executados simultaneamente nos modelos de aprendizagem profunda. Os recursos podem ser aprendidos automaticamente através da rede, em vez de serem projetados manualmente. Além disso, a rede neural profunda também pode extrair uma representação de alto nível na camada profunda, o que a torna mais adequada para tarefas complexas de reconhecimento de atividades.”
+   </p>
+<p>— Deep Learning for Sensor-based Activity Recognition: A Survey, 2018.</p>
+ </blockquote>
 
 Existem duas abordagens principais para as redes neurais que são apropriadas para a classificação de séries temporais e que demonstraram ter um bom desempenho no reconhecimento de atividades usando dados de sensores de telefones inteligentes e dispositivos de rastreamento de condicionamento físico.
 
