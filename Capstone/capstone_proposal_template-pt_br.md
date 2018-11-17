@@ -139,15 +139,13 @@ A métrica de avaliação que a ser utilizada para quantificar o desempenho tant
  
 
 Acurácia geral com todos os quatro algoritmos de classificação do modelo de benchmark:
-Algorithm	Accuracy on
-D1	Accuracy on
-D2	Accuracy of
-D3
-Decision Tree (DT)	76%	78%	86%
-Random Forest (RF)	81%	89%	93%
-Support Vector
-Machine (SVM)	76%	86%	90%
-Neural Network (NN)	76%	87%	91%
+
+| Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 |  
+|---|---|---|---|
+| Decision Tree (DT) | 76% | 78% | 86% |
+| Random Forest (RF) | 81% | 89% | 93% |
+| Support Vector Machine (SVM) | 76% | 86% | 90% |
+| Neural Network (NN) | 76% | 87% | 91% | 
 
 
 ### Design do projeto
