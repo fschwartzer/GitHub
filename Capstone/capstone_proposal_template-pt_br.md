@@ -1,7 +1,7 @@
 # Nanodegree Engenheiro de Machine Learning
 ## Proposta de projeto final
-Fernando Roberto Schwartzer |
-31 de outubro de 2018
+<p>Fernando Roberto Schwartzer</p>
+<p>17 de novembro de 2018</p>
 
 ## Proposta
 
@@ -21,7 +21,7 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
   <li>- Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it</li>
   <li>- Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it</li>
   <li>- Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it</li>
-  <li>- Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it<li>
+  <li>- Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it</li>
 </ul>
 <p>Colaboradores anteriores</p>
 <ul>
