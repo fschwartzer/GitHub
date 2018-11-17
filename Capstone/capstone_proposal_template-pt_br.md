@@ -17,92 +17,100 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
 
 ### Conjuntos de dados e entradas
 <p>O conjunto de dados utilizados no projeto (http://cs.unibo.it/projects/us-tm2017/download.html) foi desenvolvido na Universidade de Bolonha com o esforço de diferentes pessoas:</p>
-- Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it
-- Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it
-- Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it
-- Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it
+<ul>
+  <li>- Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it</li>
+  <li>- Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it</li>
+  <li>- Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it</li>
+  <li>- Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it<li>
+</ul>
 <p>Colaboradores anteriores</p>
-- Claudia Carpineti • Mestranda • e-mail: claudia.carpineti@studio.unibo.it
-- Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it
-- Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it 
+<ul>
+  <li>- Claudia Carpineti • Mestranda • e-mail: claudia.carpineti@studio.unibo.it</li>
+  <li>- Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it</li>
+  <li>- Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it</li>
+</ul>
 <p>A coleta de dados foi controlada por um aplicativo Android em execução no telefone dos usuários enquanto eles realizavam atividades. Esse aplicativo, por meio de uma interface gráfica simples, permitiu que os voluntários gravassem seu nome, iniciassem e interrompessem a coleta de dados e rotulassem a atividade que estava sendo executada. Foi pedido aos usuários para usar o aplicativo durante atividades específicas, como caminhar, estar em um carro, em um trem, em um ônibus ou ficar parado. As atividades com estas abreviações:</p>
 <p>T M = {bus, car, train, still, walking}</p> 
 <p>O aplicativo registra cada evento do sensor com uma frequência máxima de 20 Hz. Os eventos ocorrem toda vez que um sensor detecta uma alteração nos parâmetros que está medindo, fornecendo quatro informações:</p>
-- o nome do sensor que acionou o evento;
-- o timestamp do evento;
-- a acurácia do evento;
-- os dados brutos do sensor que acionaram o evento.
+<ul>
+<li>- o nome do sensor que acionou o evento;</li>
+<li>- o timestamp do evento;</li>
+<li>- a acurácia do evento;</li>
+<li>- os dados brutos do sensor que acionaram o evento.</li>
+</ul>
 
-Id:
-Time:
-activityrecognition#0:
-activityrecognition#1:
-android.sensor.accelerometer#mean:
-android.sensor.accelerometer#min:
-android.sensor.accelerometer#max:
-android.sensor.accelerometer#std:
-android.sensor.game_rotation_vector#mean:
-android.sensor.game_rotation_vector#min:
-android.sensor.game_rotation_vector#max:
-android.sensor.game_rotation_vector#std:
-android.sensor.gravity#mean:
-android.sensor.gravity#min:
-android.sensor.gravity#max:
-android.sensor.gravity#std:
-android.sensor.gyroscope#mean:
-android.sensor.gyroscope#min:
-android.sensor.gyroscope#max:
-android.sensor.gyroscope#std:
-android.sensor.gyroscope_uncalibrated#mean:
-android.sensor.gyroscope_uncalibrated#min:
-android.sensor.gyroscope_uncalibrated#max:
-android.sensor.gyroscope_uncalibrated#std:
-android.sensor.light#mean:
-android.sensor.light#min:
-android.sensor.light#max:
-android.sensor.light#std:
-android.sensor.linear_acceleration#mean:
-android.sensor.linear_acceleration#min:
-android.sensor.linear_acceleration#max:
-android.sensor.linear_acceleration#std:
-android.sensor.magnetic_field#mean:
-android.sensor.magnetic_field#min:
-android.sensor.magnetic_field#max:
-android.sensor.magnetic_field#std:
-android.sensor.magnetic_field_uncalibrated#mean:
-android.sensor.magnetic_field_uncalibrated#min:
-android.sensor.magnetic_field_uncalibrated#max:
-android.sensor.magnetic_field_uncalibrated#std:
-android.sensor.orientation#mean:
-android.sensor.orientation#min:
-android.sensor.orientation#max:
-android.sensor.orientation#std:
-android.sensor.pressure#mean:
-android.sensor.pressure#min:
-android.sensor.pressure#max:
-android.sensor.pressure#std:
-android.sensor.proximity#mean:
-android.sensor.proximity#min:
-android.sensor.proximity#max:
-android.sensor.proximity#std:
-android.sensor.rotation_vector#mean:
-android.sensor.rotation_vector#min:
-android.sensor.rotation_vector#max:
-android.sensor.rotation_vector#std:
-android.sensor.step_counter#mean:
-android.sensor.step_counter#min:
-android.sensor.step_counter#max:
-android.sensor.step_counter#std:
-sound#mean:
-sound#min:
-sound#max:
-sound#std:
-speed#mean:
-speed#min:
-speed#max:
-speed#std:
-target:
-user:
+#### Atributos
+<ul>
+<li>Id:</li>
+<li>Time:</li>
+<li>activityrecognition#0:</li>
+<li>activityrecognition#1:</li>
+<li>android.sensor.accelerometer#mean:</li>
+<li>android.sensor.accelerometer#min:</li>
+<li>android.sensor.accelerometer#max:</li>
+<li>android.sensor.accelerometer#std:</li>
+<li>android.sensor.game_rotation_vector#mean:</li>
+<li>android.sensor.game_rotation_vector#min:</li>
+<li>android.sensor.game_rotation_vector#max:</li>
+<li>android.sensor.game_rotation_vector#std:</li>
+<li>android.sensor.gravity#mean:</li>
+<li>android.sensor.gravity#min:</li>
+<li>android.sensor.gravity#max:</li>
+<li>android.sensor.gravity#std:</li>
+<li>android.sensor.gyroscope#mean:</li>
+<li>android.sensor.gyroscope#min:</li>
+<li>android.sensor.gyroscope#max:</li>
+<li>android.sensor.gyroscope#std:</li>
+<li>android.sensor.gyroscope_uncalibrated#mean:</li>
+<li>android.sensor.gyroscope_uncalibrated#min:</li>
+<li>android.sensor.gyroscope_uncalibrated#max:</li>
+<li>android.sensor.gyroscope_uncalibrated#std:</li>
+<li>android.sensor.light#mean:</li>
+<li>android.sensor.light#min:</li>
+<li>android.sensor.light#max:</li>
+<li>android.sensor.light#std:</li>
+<li>android.sensor.linear_acceleration#mean:</li>
+<li>android.sensor.linear_acceleration#min:</li>
+<li>android.sensor.linear_acceleration#max:</li>
+<li>android.sensor.linear_acceleration#std:</li>
+<li>android.sensor.magnetic_field#mean:</li>
+<li>android.sensor.magnetic_field#min:</li>
+<li>android.sensor.magnetic_field#max:</li>
+<li>android.sensor.magnetic_field#std:</li>
+<li>android.sensor.magnetic_field_uncalibrated#mean:</li>
+<li>android.sensor.magnetic_field_uncalibrated#min:</li>
+<li>android.sensor.magnetic_field_uncalibrated#max:</li>
+<li>android.sensor.magnetic_field_uncalibrated#std:</li>
+<li>android.sensor.orientation#mean:</li>
+<li>android.sensor.orientation#min:</li>
+<li>android.sensor.orientation#max:</li>
+<li>android.sensor.orientation#std:</li>
+<li>android.sensor.pressure#mean:</li>
+<li>android.sensor.pressure#min:</li>
+<li>android.sensor.pressure#max:</li>
+<li>android.sensor.pressure#std:</li>
+<li>android.sensor.proximity#mean:</li>
+<li>android.sensor.proximity#min:</li>
+<li>android.sensor.proximity#max:</li>
+<li>android.sensor.proximity#std:</li>
+<li>android.sensor.rotation_vector#mean:</li>
+<li>android.sensor.rotation_vector#min:</li>
+<li>android.sensor.rotation_vector#max:</li>
+<li>android.sensor.rotation_vector#std:</li>
+<li>android.sensor.step_counter#mean:</li>
+<li>android.sensor.step_counter#min:</li>
+<li>android.sensor.step_counter#max:</li>
+<li>android.sensor.step_counter#std:</li>
+<li>sound#mean:</li>
+<li>sound#min:</li>
+<li>sound#max:</li>
+<li>sound#std:</li>
+<li>speed#mean:</li>
+<li>speed#min:</li>
+<li>speed#max:</li>
+<li>speed#std:</li>
+<li>target:</li>
+<li>user:</li>
 
 ### Descrição da solução
 Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.
