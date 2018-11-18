@@ -29,9 +29,20 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
   <li>Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it</li>
   <li>Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it</li>
 </ul>
-<p>A coleta de dados foi controlada por um aplicativo Android em execução no telefone dos usuários enquanto eles realizavam atividades. Esse aplicativo, por meio de uma interface gráfica simples, permitiu que os voluntários gravassem seu nome, iniciassem e interrompessem a coleta de dados e rotulassem a atividade que estava sendo executada. Foi pedido aos usuários para usar o aplicativo durante atividades específicas, como caminhar, estar em um carro, em um trem, em um ônibus ou ficar parado. As atividades com estas abreviações:</p>
+<p>A coleta de dados foi controlada por um aplicativo Android em execução no telefone dos usuários enquanto eles realizavam atividades. Esse aplicativo, por meio de uma interface gráfica simples, permitiu que os voluntários gravassem seu nome, iniciassem e interrompessem a coleta de dados e rotulassem a atividade que estava sendo executada. Foi pedido aos usuários para usar o aplicativo durante atividades específicas, como caminhar, estar em um carro, em um trem, em um ônibus ou ficar parado. As atividades foram rotuladas com estas abreviações:</p>
+
 <p>T M = {bus, car, train, still, walking}</p> 
+
+<ul>
+<li><Strong>'bus':</Strong> Ônibus</li>
+<li><Strong>'car':</Strong> Carro</li>
+<li><Strong>'train':</Strong> Trem</li>
+<li><Strong>'still':</Strong> Parado</li>
+<li><Strong>'walking':</Strong> Caminhando</li>
+</ul>
+
 <p>O aplicativo registra cada evento do sensor com uma frequência máxima de 20 Hz. Os eventos ocorrem toda vez que um sensor detecta uma alteração nos parâmetros que está medindo, fornecendo quatro informações:</p>
+
 <ul>
 <li>o nome do sensor que acionou o evento;</li>
 <li>o timestamp do evento;</li>
@@ -52,11 +63,27 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
 |   | Rotation vector | Rotation vector |
 |   | Game rotation vector | Game rotation vector |
 |   | Gyroscope uncalibrated | Gyroscope uncalibrated |
+<ul>
+<li><Strong>Accelerometer:</Strong> Acelerômetro</li>
+<li><Strong>Sound:</Strong> Som</li>
+<li><Strong>Orientation:</Strong> Orientação</li>
+<li><Strong>Linear acceleration:</Strong> Aceleração Linear</li>
+<li><Strong>Speed:</Strong> Velocidade</li>
+<li><Strong>Gyroscope:</Strong> Giroscópio</li>
+<li><Strong>Rotation vector:</Strong> Vetor de rotação</li>
+<li><Strong>Game rotation vector:</Strong> Vetor de rotação para jogos</li>
+<li><Strong>Gyroscope uncalibrated:</Strong> Giroscópio sem calibração</li>
+</ul>
 
-<Strong>Accelerometer:</Strong> Acelerômetro
-<Strong>Sound:</Strong> Som
-<Strong>Orientation:</Strong> Orientação
+<p>Foram gerados recursos estatísticos baseados nas múltiplas leituras dos sensores. Para cada sensor, 4 recursos diferentes:</p>
 
+<ul>
+<li><Strong>'max':</Strong> Máximo valor obtido dentro da janela observada</li>
+<li><Strong>'min':</Strong> Mínimo valor obtido dentro da janela observada</li>
+<li><Strong>'mean':</Strong> Valor médio calculado dentro da janela observada</li>
+<li><Strong>'std':</Strong> Desvio padrão calculado dentro da janela observada</li>
+</ul>
+  
 ### Descrição da solução
 Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.
 
