@@ -159,7 +159,7 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 
 ### Design do projeto
 <p>No projeto serão utilizados 3 conjuntos de dados, aplicando 2 algoritmos.
-Assim como no modelo de referência (benchmark), o primeiro conjunto de dados utilização as informações do acelerômetro, giroscópio e som. O segundo conjunto de dados terá as informações de 8 sensores e o terceiro conjunto de dados de todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade.
+Assim como no modelo de referência (benchmark), o primeiro conjunto de dados terá a utilização das informações do acelerômetro, giroscópio e som. O segundo conjunto de dados terá as informações de 8 sensores e o terceiro conjunto de dados de todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade.
 No projeto, serão aplicadas duas abordagens para as redes neurais, que são apropriadas para a classificação de séries temporais e que demonstraram ter um bom desempenho no reconhecimento de atividades usando dados de sensores de telefones inteligentes e dispositivos de rastreamento de condicionamento físico.
 Serão os modelos de redes neurais por convolução (CNN) e modelos de redes neurais recorrentes (RNN).</p>
 <p>O projeto estará estruturado da seguinte forma:</p>
@@ -171,15 +171,16 @@ Serão os modelos de redes neurais por convolução (CNN) e modelos de redes neu
   <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-CNN-Model-for-Accelerompter-Data.png" | width=500 /></p>
   <li><Strong>RNN</Strong></li>
   <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-LSTM-RNN-for-Activity-Recognition.png" | width=500 /></p>
-  
+  <li>Escolha da melhor janela de dados</li>
+  <li>Escolha do melhor modelo, visando uma Acurácia melhor que do modelo de referência (benchmark)</li>
 
 
 -----------
 
-**Antes de enviar sua proposta, pergunte-se. . .**
+**Referências**
 
-- A proposta que você escreveu segue uma estrutura bem organizada, similar ao modelo de projeto?
-- Todas as seções (em especial, **Descrição da solução** e **Design do projeto**) estão escritas de uma forma clara, concisa e específica? Existe algum termo ou frase ambígua que precise de esclarecimento?
-- O público-alvo de seu projeto será capaz de entender sua proposta?
-- Você revisou sua proposta de projeto adequadamente, de forma a minimizar a quantidade de erros gramaticais e ortográficos?
-- Todos os recursos usados neste projeto foram corretamente citados e referenciados?
+- http://cs.unibo.it/projects/us-tm2017/index.html
+- https://medium.com/@erikhallstrm/hello-world-rnn-83cd7105b767
+- https://medium.com/@erikhallstrm/hello-world-rnn-83cd7105b767
+- https://www.tensorflow.org/tutorials/estimators/cnn
+- https://machinelearningmastery.com/deep-learning-models-for-human-activity-recognition/
