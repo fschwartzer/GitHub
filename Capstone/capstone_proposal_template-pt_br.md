@@ -40,77 +40,22 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
 </ul>
 
 #### Atributos
-<ul>
-<li>Id:</li>
-<li>Time:</li>
-<li>activityrecognition#0:</li>
-<li>activityrecognition#1:</li>
-<li>android.sensor.accelerometer#mean:</li>
-<li>android.sensor.accelerometer#min:</li>
-<li>android.sensor.accelerometer#max:</li>
-<li>android.sensor.accelerometer#std:</li>
-<li>android.sensor.game_rotation_vector#mean:</li>
-<li>android.sensor.game_rotation_vector#min:</li>
-<li>android.sensor.game_rotation_vector#max:</li>
-<li>android.sensor.game_rotation_vector#std:</li>
-<li>android.sensor.gravity#mean:</li>
-<li>android.sensor.gravity#min:</li>
-<li>android.sensor.gravity#max:</li>
-<li>android.sensor.gravity#std:</li>
-<li>android.sensor.gyroscope#mean:</li>
-<li>android.sensor.gyroscope#min:</li>
-<li>android.sensor.gyroscope#max:</li>
-<li>android.sensor.gyroscope#std:</li>
-<li>android.sensor.gyroscope_uncalibrated#mean:</li>
-<li>android.sensor.gyroscope_uncalibrated#min:</li>
-<li>android.sensor.gyroscope_uncalibrated#max:</li>
-<li>android.sensor.gyroscope_uncalibrated#std:</li>
-<li>android.sensor.light#mean:</li>
-<li>android.sensor.light#min:</li>
-<li>android.sensor.light#max:</li>
-<li>android.sensor.light#std:</li>
-<li>android.sensor.linear_acceleration#mean:</li>
-<li>android.sensor.linear_acceleration#min:</li>
-<li>android.sensor.linear_acceleration#max:</li>
-<li>android.sensor.linear_acceleration#std:</li>
-<li>android.sensor.magnetic_field#mean:</li>
-<li>android.sensor.magnetic_field#min:</li>
-<li>android.sensor.magnetic_field#max:</li>
-<li>android.sensor.magnetic_field#std:</li>
-<li>android.sensor.magnetic_field_uncalibrated#mean:</li>
-<li>android.sensor.magnetic_field_uncalibrated#min:</li>
-<li>android.sensor.magnetic_field_uncalibrated#max:</li>
-<li>android.sensor.magnetic_field_uncalibrated#std:</li>
-<li>android.sensor.orientation#mean:</li>
-<li>android.sensor.orientation#min:</li>
-<li>android.sensor.orientation#max:</li>
-<li>android.sensor.orientation#std:</li>
-<li>android.sensor.pressure#mean:</li>
-<li>android.sensor.pressure#min:</li>
-<li>android.sensor.pressure#max:</li>
-<li>android.sensor.pressure#std:</li>
-<li>android.sensor.proximity#mean:</li>
-<li>android.sensor.proximity#min:</li>
-<li>android.sensor.proximity#max:</li>
-<li>android.sensor.proximity#std:</li>
-<li>android.sensor.rotation_vector#mean:</li>
-<li>android.sensor.rotation_vector#min:</li>
-<li>android.sensor.rotation_vector#max:</li>
-<li>android.sensor.rotation_vector#std:</li>
-<li>android.sensor.step_counter#mean:</li>
-<li>android.sensor.step_counter#min:</li>
-<li>android.sensor.step_counter#max:</li>
-<li>android.sensor.step_counter#std:</li>
-<li>sound#mean:</li>
-<li>sound#min:</li>
-<li>sound#max:</li>
-<li>sound#std:</li>
-<li>speed#mean:</li>
-<li>speed#min:</li>
-<li>speed#max:</li>
-<li>speed#std:</li>
-<li>target:</li>
-<li>user:</li>
+
+| Sensores de primeira classe de classificação | Sensores de segunda classe de classificação | Sensores de terceira classe de classificação | 
+|---|---|---|
+| Accelerometer | Accelerometer | Accelerometer |
+| Sound | Sound | Sound |
+|   | Orientation | Orientation |
+|   | Linear acceleration | Linear acceleration |
+|   |   | Speed |
+| Gyroscope | Gyroscope | Gyroscope |
+|   | Rotation vector | Rotation vector |
+|   | Game rotation vector | Game rotation vector |
+|   | Gyroscope uncalibrated | Gyroscope uncalibrated |
+
+<Strong>Accelerometer:</Strong> Acelerômetro
+<Strong>Sound:</Strong> Som
+<Strong>Orientation:</Strong> Orientação
 
 ### Descrição da solução
 Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.
