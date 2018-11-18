@@ -135,27 +135,29 @@ Eles são modelos de redes neurais por convolução e modelos de redes neurais r
 
 ### Modelo de referência (benchmark)
 <p>O modelo de referência será o trabalho de detecção de modo de transporte realizado por equipe da Universidade de Bolonha, Itália:</p>
+<blockquote>
 <p>Carpineti C., Lomonaco V., Bedogni L., Di Felice M., Bononi L., "Custom Dual Transportation Mode Detection by Smartphone Devices Exploiting Sensor Diversity", in Proceedings of the 14th Workshop on Context and Activity Modeling and Recognition (IEEE COMOREA 2018), Athens, Greece, March 19-23, 2018</p>
+</blockquote>
 <p>Pré-impressão disponível: https://arxiv.org/abs/1810.05596</p>
 <p>Em seu trabalho, utilizaram 3 conjuntos de dados, aplicando 4 algoritmos.
 Para cada conjunto, foram construídos quatro modelos com quatro algoritmos de classificação diferentes:</p>
 <ul>
-<li>Decision Trees (DT)
-Random Forest (RF)
-Support Vector Machines(SVM)
-Neural Network (NN)</li>
+  <li>Decision Trees (DT)</li>
+  <li>Random Forest (RF)</li>
+  <li>Support Vector Machines(SVM)</li>
+  <li>Neural Network (NN)</li>
 </ul>  
-Os sensores incluídos no primeiro conjunto (parâmetro 1) foram acelerômetro, som e giroscópio. Esses três sensores possuem os maiores valores de precisão obtidos individualmente.
-O primeiro conjunto de dados é formado por doze recursos, quatro para cada sensor. Foi realizada a classificação com os quatro algoritmos de classificação mencionados anteriormente. A precisão geral dos algoritmos está entre 82% e 88%. Mesmo que a floresta aleatória produza os maiores valores de precisão (88%), todos os algoritmos têm um desempenho substancialmente bom.
-Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes, exceto a velocidade, para fins de economia de bateria, foram alcançados melhores resultados em termos de precisão. Com o segundo conjunto de dados, formado por oito sensores e trinta e dois recursos, a precisão aumenta até valores entre 86% e 93%.
-Por fim, foi treinado um modelo no terceiro conjunto de dados formado por todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade. O resultado mostra como se considera a velocidade, aumentando ainda mais a capacidade do modelo de inferir qual modo de transporte o usuário está usando atualmente. Neste último caso, a precisão atingiu um nível de alcance entre 91% e 96%.
+<p>Os sensores incluídos no primeiro conjunto (parâmetro 1) foram acelerômetro, som e giroscópio. Esses três sensores possuem os maiores valores de precisão obtidos individualmente.</p>
+<p>O primeiro conjunto de dados é formado por doze recursos, quatro para cada sensor. Foi realizada a classificação com os quatro algoritmos de classificação mencionados anteriormente. A precisão geral dos algoritmos está entre 82% e 88%. Mesmo que a floresta aleatória produza os maiores valores de precisão (88%), todos os algoritmos têm um desempenho substancialmente bom.
+Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes, exceto a velocidade, para fins de economia de bateria, foram alcançados melhores resultados em termos de precisão. Com o segundo conjunto de dados, formado por oito sensores e trinta e dois recursos, a precisão aumenta até valores entre 86% e 93%.</p>
+<p>Por fim, foi treinado um modelo no terceiro conjunto de dados formado por todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade. O resultado mostra como se considera a velocidade, aumentando ainda mais a capacidade do modelo de inferir qual modo de transporte o usuário está usando atualmente. Neste último caso, a precisão atingiu um nível de alcance entre 91% e 96%.</p>
 
 
 ### Métricas de avaliação
-A métrica de avaliação que a ser utilizada para quantificar o desempenho tanto do modelo de benchmark como do modelo de solução apresentados será a Acurácia.
+<p>A métrica de avaliação que a ser utilizada para quantificar o desempenho tanto do modelo de benchmark como do modelo de solução apresentados será a Acurácia.</p>
 <img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/acuracia.png" />
 
-Acurácia geral com todos os quatro algoritmos de classificação do modelo de benchmark:
+<p>Acurácia geral com todos os quatro algoritmos de classificação do modelo de benchmark:</p>
 
 | Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 |  
 |---|:---:|:---:|:---:|
