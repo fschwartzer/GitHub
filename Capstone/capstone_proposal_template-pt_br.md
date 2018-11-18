@@ -18,16 +18,16 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
 ### Conjuntos de dados e entradas
 <p>O conjunto de dados utilizados no projeto (http://cs.unibo.it/projects/us-tm2017/download.html) foi desenvolvido na Universidade de Bolonha com o esforço de diferentes pessoas:</p>
 <ul>
-  <li>- Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it</li>
-  <li>- Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it</li>
-  <li>- Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it</li>
-  <li>- Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it</li>
+  <li>Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it</li>
+  <li>Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it</li>
+  <li>Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it</li>
+  <li>Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it</li>
 </ul>
 <p>Colaboradores anteriores</p>
 <ul>
-  <li>- Claudia Carpineti • Mestranda • e-mail: claudia.carpineti@studio.unibo.it</li>
-  <li>- Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it</li>
-  <li>- Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it</li>
+  <li>Claudia Carpineti • Mestranda • e-mail: claudia.carpineti@studio.unibo.it</li>
+  <li>Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it</li>
+  <li>Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it</li>
 </ul>
 <p>A coleta de dados foi controlada por um aplicativo Android em execução no telefone dos usuários enquanto eles realizavam atividades. Esse aplicativo, por meio de uma interface gráfica simples, permitiu que os voluntários gravassem seu nome, iniciassem e interrompessem a coleta de dados e rotulassem a atividade que estava sendo executada. Foi pedido aos usuários para usar o aplicativo durante atividades específicas, como caminhar, estar em um carro, em um trem, em um ônibus ou ficar parado. As atividades com estas abreviações:</p>
 <p>T M = {bus, car, train, still, walking}</p> 
@@ -151,7 +151,7 @@ Por fim, foi treinado um modelo no terceiro conjunto de dados formado por todos 
 
 ### Métricas de avaliação
 A métrica de avaliação que a ser utilizada para quantificar o desempenho tanto do modelo de benchmark como do modelo de solução apresentados será a Acurácia.
- 
+<img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/acuracia.png" />
 
 Acurácia geral com todos os quatro algoritmos de classificação do modelo de benchmark:
 
