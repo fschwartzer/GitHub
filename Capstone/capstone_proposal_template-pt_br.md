@@ -33,10 +33,10 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
 <p>T M = {bus, car, train, still, walking}</p> 
 <p>O aplicativo registra cada evento do sensor com uma frequência máxima de 20 Hz. Os eventos ocorrem toda vez que um sensor detecta uma alteração nos parâmetros que está medindo, fornecendo quatro informações:</p>
 <ul>
-<li>- o nome do sensor que acionou o evento;</li>
-<li>- o timestamp do evento;</li>
-<li>- a acurácia do evento;</li>
-<li>- os dados brutos do sensor que acionaram o evento.</li>
+<li>o nome do sensor que acionou o evento;</li>
+<li>o timestamp do evento;</li>
+<li>a acurácia do evento;</li>
+<li>os dados brutos do sensor que acionaram o evento.</li>
 </ul>
 
 #### Atributos
@@ -134,15 +134,17 @@ Eles são modelos de redes neurais por convolução e modelos de redes neurais r
  </blockquote>
 
 ### Modelo de referência (benchmark)
-O modelo de referência será o trabalho de detecção de modo de transporte realizado por equipe da Universidade de Bolonha, Itália:
-Carpineti C., Lomonaco V., Bedogni L., Di Felice M., Bononi L., "Custom Dual Transportation Mode Detection by Smartphone Devices Exploiting Sensor Diversity", in Proceedings of the 14th Workshop on Context and Activity Modeling and Recognition (IEEE COMOREA 2018), Athens, Greece, March 19-23, 2018
-Pré-impressão disponível: https://arxiv.org/abs/1810.05596
-Em seu trabalho, utilizaram 3 conjuntos de dados, aplicando 4 algoritmos.
-Para cada conjunto, foram construídos quatro modelos com quatro algoritmos de classificação diferentes:
-•	Decision Trees (DT)
-•	Random Forest (RF)
-•	Support Vector Machines(SVM)
-•	Neural Network (NN)
+<p>O modelo de referência será o trabalho de detecção de modo de transporte realizado por equipe da Universidade de Bolonha, Itália:</p>
+<p>Carpineti C., Lomonaco V., Bedogni L., Di Felice M., Bononi L., "Custom Dual Transportation Mode Detection by Smartphone Devices Exploiting Sensor Diversity", in Proceedings of the 14th Workshop on Context and Activity Modeling and Recognition (IEEE COMOREA 2018), Athens, Greece, March 19-23, 2018</p>
+<p>Pré-impressão disponível: https://arxiv.org/abs/1810.05596</p>
+<p>Em seu trabalho, utilizaram 3 conjuntos de dados, aplicando 4 algoritmos.
+Para cada conjunto, foram construídos quatro modelos com quatro algoritmos de classificação diferentes:</p>
+<ul>
+<li>Decision Trees (DT)
+Random Forest (RF)
+Support Vector Machines(SVM)
+Neural Network (NN)</li>
+</ul>  
 Os sensores incluídos no primeiro conjunto (parâmetro 1) foram acelerômetro, som e giroscópio. Esses três sensores possuem os maiores valores de precisão obtidos individualmente.
 O primeiro conjunto de dados é formado por doze recursos, quatro para cada sensor. Foi realizada a classificação com os quatro algoritmos de classificação mencionados anteriormente. A precisão geral dos algoritmos está entre 82% e 88%. Mesmo que a floresta aleatória produza os maiores valores de precisão (88%), todos os algoritmos têm um desempenho substancialmente bom.
 Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes, exceto a velocidade, para fins de economia de bateria, foram alcançados melhores resultados em termos de precisão. Com o segundo conjunto de dados, formado por oito sensores e trinta e dois recursos, a precisão aumenta até valores entre 86% e 93%.
