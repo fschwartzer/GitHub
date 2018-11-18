@@ -78,12 +78,22 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
 <p>Foram gerados recursos estatísticos baseados nas múltiplas leituras dos sensores. Para cada sensor, 4 recursos diferentes:</p>
 
 <ul>
-<li><Strong>'max':</Strong> Máximo valor obtido dentro da janela observada</li>
-<li><Strong>'min':</Strong> Mínimo valor obtido dentro da janela observada</li>
-<li><Strong>'mean':</Strong> Valor médio calculado dentro da janela observada</li>
-<li><Strong>'std':</Strong> Desvio padrão calculado dentro da janela observada</li>
+<li><Strong>'max':</Strong> Máximo valor obtido dentro da janela observada¹</li>
+<li><Strong>'min':</Strong> Mínimo valor obtido dentro da janela observada¹</li>
+<li><Strong>'mean':</Strong> Valor médio calculado dentro da janela observada¹</li>
+<li><Strong>'std':</Strong> Desvio padrão calculado dentro da janela observada¹</li>
 </ul>
-  
+
+<p>[1] Uma abordagem direta de preparação de dados que foi usada tanto para métodos clássicos de aprendizado de máquina quanto para redes neurais envolve dividir os dados do sinal de entrada em janelas de sinais, onde uma janela pode ter de um a alguns segundos de observação dos dados. Isso geralmente é chamado de "sliding window" (janela deslizante).</p>
+
+<blockquote>
+<p>"O reconhecimento da atividade humana visa inferir as ações de uma ou mais pessoas a partir de um conjunto de observações captadas por sensores. Normalmente, isso é feito seguindo uma abordagem de "sliding window" de comprimento fixo para a extração de recursos, onde dois parâmetros devem ser corrigidos: o tamanho da janela e o deslocamento."</p>
+
+<p>— A Dynamic Sliding Window Approach for Activity Recognition, 2011</p>
+ </blockquote>
+
+Cada janela também está associada a uma atividade específica. Uma determinada janela de dados pode ter várias variáveis, como os eixos x, y e z de um sensor acelerômetro.
+
 ### Descrição da solução
 Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.
 
