@@ -162,19 +162,15 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 Assim como no modelo de referência (benchmark), o primeiro conjunto de dados utilização as informações do acelerômetro, giroscópio e som. O segundo conjunto de dados terá as informações de 8 sensores e o terceiro conjunto de dados de todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade.
 No projeto, serão aplicadas duas abordagens para as redes neurais, que são apropriadas para a classificação de séries temporais e que demonstraram ter um bom desempenho no reconhecimento de atividades usando dados de sensores de telefones inteligentes e dispositivos de rastreamento de condicionamento físico.
 Serão os modelos de redes neurais por convolução (CNN) e modelos de redes neurais recorrentes (RNN).</p>
-<p>O rpojeto estará estruturado da seguinte forma:</p>
+<p>O projeto estará estruturado da seguinte forma:</p>
 <ul>
   <li>Exploração dos dados</li>
   <li>Pré-processamento dos dados</li>
-  <li>Aplicação dos Modelos de CNN e RNN</li>
-  
-      <li><Strong>CNN</Strong></li>
-  
-      <img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-CNN-Model-for-Accelerompter-Data.png" />
-      
-      <li><Strong>RNN</Strong></li>
-      
-      <img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-LSTM-RNN-for-Activity-Recognition.png" />
+  <li>Aplicação dos Modelos de CNN e RNN:</li>
+  <li><Strong>CNN</Strong></li>
+  <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-CNN-Model-for-Accelerompter-Data.png" /></p>
+  <li><Strong>RNN</Strong></li>
+  <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-LSTM-RNN-for-Activity-Recognition.png" /></p>
   
 
 
