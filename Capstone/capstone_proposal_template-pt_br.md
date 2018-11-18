@@ -1,7 +1,7 @@
 # Nanodegree Engenheiro de Machine Learning
 ## Proposta de projeto final
 <p>Fernando Roberto Schwartzer</p>
-<p>17 de novembro de 2018</p>
+<p>18 de novembro de 2018</p>
 
 ## Proposta
 
