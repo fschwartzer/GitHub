@@ -167,10 +167,14 @@ Serão os modelos de redes neurais por convolução (CNN) e modelos de redes neu
   <li>Exploração dos dados</li>
   <li>Pré-processamento dos dados</li>
   <li>Aplicação dos Modelos de CNN e RNN</li>
-  '''CNN
-  <img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-CNN-Model-for-Accelerompter-Data.png" />
-  '''RNN
-  <img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-LSTM-RNN-for-Activity-Recognition.png" />
+  
+      <li><Strong>CNN</Strong></li>
+  
+      <img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-CNN-Model-for-Accelerompter-Data.png" />
+      
+      <li><Strong>RNN</Strong></li>
+      
+      <img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-LSTM-RNN-for-Activity-Recognition.png" />
   
 
 
