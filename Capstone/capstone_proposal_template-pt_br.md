@@ -135,12 +135,14 @@ Eles são modelos de redes neurais por convolução e modelos de redes neurais r
 
 ### Modelo de referência (benchmark)
 <p>O modelo de referência será o trabalho de detecção de modo de transporte realizado por equipe da Universidade de Bolonha, Itália:</p>
-    @article{carpineti18,
-      Author = {Claudia Carpineti, Vincenzo Lomonaco, Luca Bedogni, Marco Di Felice, Luciano Bononi},
-      Journal = {Proc. of the 14th Workshop on Context and Activity Modeling and Recognition (IEEE COMOREA 2018)},
-      Title = {Custom Dual Transportation Mode Detection by Smartphone Devices Exploiting Sensor Diversity},
-      Year = {2018}
+
+    @article {carpineti18,
+    Author = {Claudia Carpineti, Vincenzo Lomonaco, Luca Bedogni, Marco Di Felice, Luciano Bononi},
+    Journal = {Proc. of the 14th Workshop on Context and Activity Modeling and Recognition (IEEE COMOREA 2018)},
+    Title = {Custom Dual Transportation Mode Detection by Smartphone Devices Exploiting Sensor Diversity},
+    Year = {2018}
     }
+    
 <p>Pré-impressão disponível: https://arxiv.org/abs/1810.05596</p>
 <p>Em seu trabalho, utilizaram 3 conjuntos de dados, aplicando 4 algoritmos.
 Para cada conjunto, foram construídos quatro modelos com quatro algoritmos de classificação diferentes:</p>
