@@ -95,7 +95,8 @@ A intenção é registrar os dados do sensor e as atividades correspondentes par
 Cada janela também está associada a uma atividade específica. Uma determinada janela de dados pode ter várias variáveis, como os eixos x, y e z de um sensor acelerômetro.
 
 ### Descrição da solução
-Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.
+<p>A solução para a obtenção da melhor pontuação possível para a métrica Acurácia será a aplicação de modelos de redes neurais por convolução e modelos de redes neurais recorrentes.</p>
+<p>Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.</p>
 
 <blockquote>
   <p>
