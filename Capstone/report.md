@@ -37,14 +37,87 @@ Historicamente, os dados dos sensores para reconhecimento de atividades eram dif
 | Neural Network (NN) | 76% | 87% | 91% | 
 
 ## II. Análise
-_(aprox. 2-4 páginas)_
 
 ### Exploração dos dados
-Nesta seção, é esperado que você analise os dados que você está usando para o problema. Esses dados podem ser tanto na forma de um conjunto de dados (ou conjuntos de dados), dados de entrada (ou arquivos de entrada), ou até um ambiente. O tipo de dados deve ser descrito detalhadamente e, se possível, ter estatísticas e informações básicas apresentadas (tais como discussão dos atributos de entrada ou definição de características das entradas ou do ambiente) Qualquer anormalidade ou qualidade interessante dos dados que possam precisar ser devidamente tratadas devem ser identificadas (tais como características que precisem ser transformadas ou a possibilidade de valores atípicos) Questões para se perguntar ao escrever esta seção:
-- _Se exite um conjunto de dados para o problema em questão, você discutiu totalmente as características desse conjunto? Uma amostra dos dados foi oferecida ao leitor?_
-- _Se existe um conjunto de dados para o problema, as estatísticas sobre eles foram calculadas e reportadas? Foram discutidos quaisquer resultados relevantes desses cálculos?_
-- _Se **não** existe um conjunto de dados para o problema, foi realizada uma discussão sobre o espaço de entrada ou os dados de entrada do problema?_
-- _Existem anormalidades ou características acerca do espaço de entrada ou conjunto de dados que necessitem ser direcionados? (variáveis categóricas, valores faltando, valores atípicos, etc.)_
+<p>O conjunto de dados utilizados no projeto (http://cs.unibo.it/projects/us-tm2017/download.html) foi desenvolvido na Universidade de Bolonha com o esforço de diferentes pessoas:</p>
+<ul>
+  <li>Marco Di Felice • Professor Associado • email: marco.difelice3@unibo.it</li>
+  <li>Luciano Bononi • Professor Associado • email: luciano.bononi@unibo.it</li>
+  <li>Luca Bedogni • Professor Assistente • email: luca.bedogni4@unibo.it</li>
+  <li>Vincenzo Lomonaco • Estudante de doutorado • email: vincenzo.lomonaco@unibo.it</li>
+</ul>
+<p>Colaboradores anteriores</p>
+<ul>
+  <li>Claudia Carpineti • Mestranda • e-mail: claudia.carpineti@studio.unibo.it</li>
+  <li>Matteo Cappella • Aluno de mestrado • email: matteo.cappella@studio.unibo.it</li>
+  <li>Simone Passaretti • Aluno de mestrado • email: simone.passaretti@studio.unibo.it</li>
+</ul>
+<p>A coleta de dados foi controlada por um aplicativo Android em execução no telefone dos usuários enquanto eles realizavam atividades. Esse aplicativo, por meio de uma interface gráfica simples, permitiu que os voluntários gravassem seu nome, iniciassem e interrompessem a coleta de dados e rotulassem a atividade que estava sendo executada. Foi pedido aos usuários para usar o aplicativo durante atividades específicas, como caminhar, estar em um carro, em um trem, em um ônibus ou ficar parado. As atividades foram rotuladas com estas abreviações:</p>
+
+<p>T M = {bus, car, train, still, walking}</p> 
+
+<ul>
+<li><Strong>'bus':</Strong> Ônibus</li>
+<li><Strong>'car':</Strong> Carro</li>
+<li><Strong>'train':</Strong> Trem</li>
+<li><Strong>'still':</Strong> Parado</li>
+<li><Strong>'walking':</Strong> Caminhando</li>
+</ul>
+
+<p>O aplicativo registra cada evento do sensor com uma frequência máxima de 20 Hz. Os eventos ocorrem toda vez que um sensor detecta uma alteração nos parâmetros que está medindo, fornecendo quatro informações:</p>
+
+<ul>
+<li>o nome do sensor que acionou o evento;</li>
+<li>o timestamp do evento;</li>
+<li>a acurácia do evento;</li>
+<li>os dados brutos do sensor que acionaram o evento.</li>
+</ul>
+
+#### Atributos
+
+| Sensores de primeira classe de classificação | Sensores de segunda classe de classificação | Sensores de terceira classe de classificação | 
+|---|---|---|
+| Accelerometer | Accelerometer | Accelerometer |
+| Sound | Sound | Sound |
+|   | Orientation | Orientation |
+|   | Linear acceleration | Linear acceleration |
+|   |   | Speed |
+| Gyroscope | Gyroscope | Gyroscope |
+|   | Rotation vector | Rotation vector |
+|   | Game rotation vector | Game rotation vector |
+|   | Gyroscope uncalibrated | Gyroscope uncalibrated |
+<ul>
+<li><Strong>Accelerometer:</Strong> Acelerômetro</li>
+<li><Strong>Sound:</Strong> Som</li>
+<li><Strong>Orientation:</Strong> Orientação</li>
+<li><Strong>Linear acceleration:</Strong> Aceleração Linear</li>
+<li><Strong>Speed:</Strong> Velocidade</li>
+<li><Strong>Gyroscope:</Strong> Giroscópio</li>
+<li><Strong>Rotation vector:</Strong> Vetor de rotação</li>
+<li><Strong>Game rotation vector:</Strong> Vetor de rotação para jogos</li>
+<li><Strong>Gyroscope uncalibrated:</Strong> Giroscópio sem calibração</li>
+</ul>
+
+<p>Foram gerados recursos estatísticos baseados nas múltiplas leituras dos sensores. Para cada sensor, 4 recursos diferentes:</p>
+
+<ul>
+<li><Strong>'max':</Strong> Máximo valor obtido dentro da janela observada¹</li>
+<li><Strong>'min':</Strong> Mínimo valor obtido dentro da janela observada¹</li>
+<li><Strong>'mean':</Strong> Valor médio calculado dentro da janela observada¹</li>
+<li><Strong>'std':</Strong> Desvio padrão calculado dentro da janela observada¹</li>
+</ul>
+
+<p>[1] Uma abordagem direta de preparação de dados que foi usada tanto para métodos clássicos de aprendizado de máquina quanto para redes neurais envolve dividir os dados do sinal de entrada em janelas de sinais, onde uma janela pode ter de um a alguns segundos de observação dos dados. Isso geralmente é chamado de "sliding window" (janela deslizante).</p>
+
+<blockquote>
+<p>"O reconhecimento da atividade humana visa inferir as ações de uma ou mais pessoas a partir de um conjunto de observações captadas por sensores. Normalmente, isso é feito seguindo uma abordagem de "sliding window" de comprimento fixo para a extração de recursos, onde dois parâmetros devem ser corrigidos: o tamanho da janela e o deslocamento."</p>
+
+<p>— A Dynamic Sliding Window Approach for Activity Recognition, 2011</p>
+ </blockquote>
+
+Cada janela também está associada a uma atividade específica. Uma determinada janela de dados pode ter várias variáveis, como os eixos x, y e z de um sensor acelerômetro.
+
+No projeto foram utilizadas as janelas de 5 segundos, equivalente a 1% dos dados brutos, e de 0,5 segundos, equivalente a 10% dos dados brutos.
 
 ### Visualização exploratória
 Nesta seção, você precisará fornecer alguma forma de visualização que sintetize ou evidencie uma característica ou atributo relevante sobre os dados. A visualização deve sustentar adequadamente os dados utilizados. Discuta por que essa visualização foi escolhida e por que é relevante. Questões para se perguntar ao escrever esta seção:
