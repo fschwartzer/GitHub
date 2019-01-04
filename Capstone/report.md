@@ -147,8 +147,8 @@ A seguir são apresentados gráficos da distrubuição dos dados para cada um do
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Time.png" | width=800 /></p>
 <p>Percebe-se uma grande variação na escala dos dados, sendo necessário tratá-los para evitar que o desempenho preditivo dos algoritmos seja prejudicado.</p>
 <p>Por isso, os dados foram tratados com o MinMaxScaler da biblioteca Scikit-Learn. Nesta abordagem, os dados são escalados para um intervalo fixo - geralmente de 0 a 1.
-O custo de ter esse intervalo limitado - em contraste com a padronização - é que acabaremos com desvios padrão menores, o que pode suprimir o efeito de outliers.</p>
-<p>Um dimensionamento Min-Max geralmente é feito por meio da seguinte equação:</p>
+Com esse intervalo limitado, eliminam-se desvios padrão menores, o que pode suprimir o efeito de outliers.</p>
+<p>O dimensionamento Min-Max é feito por meio da seguinte equação:</p>
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/CodeCogsEqn(1).gif" | width=200 /></p>
   
 ### Algoritmos e técnicas
