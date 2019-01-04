@@ -120,8 +120,18 @@ Cada janela também está associada a uma atividade específica. Uma determinada
 No projeto foram utilizadas as janelas de 5 segundos, equivalente a 1% dos dados brutos, e de 0,5 segundos, equivalente a 10% dos dados brutos.
 
 ### Visualização exploratória
+
+<p>Os gráficos abaixo apresentam a contagem de dados por Modo de Transporte para as janelas de 0.5 segundos e 5 segundos:</p>
+
+<li><strong>Janela de 0.5 segundos</strong></li>
+
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=800 /></p>
+
+<li><strong>Janela de 5 segundos</strong></li>
+
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 5 seconds.png" | width=800 /></p>
+
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Accelerometer.png" | width=800 /></p>
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Game Rotation Vector.png" | width=800 /></p>
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Gyroscope Uncalibrated.png" | width=800 /></p>
