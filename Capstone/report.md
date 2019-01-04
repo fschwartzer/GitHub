@@ -121,6 +121,17 @@ No projeto foram utilizadas as janelas de 5 segundos, equivalente a 1% dos dados
 
 ### Visualização exploratória
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 5 seconds.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Accelerometer.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Game Rotation Vector.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Gyroscope Uncalibrated.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Gyroscope.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Linear Acceleration.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Orientation.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Rotation Vector.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Sound.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Speed.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Time.png" | width=800 /></p>
 Nesta seção, você precisará fornecer alguma forma de visualização que sintetize ou evidencie uma característica ou atributo relevante sobre os dados. A visualização deve sustentar adequadamente os dados utilizados. Discuta por que essa visualização foi escolhida e por que é relevante. Questões para se perguntar ao escrever esta seção:
 - _Você visualizou uma característica ou um atributo relevante acerca do conjunto de dados ou dados de entrada?_
 - _A visualização foi completamente analisada e discutida?_
