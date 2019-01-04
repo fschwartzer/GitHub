@@ -152,10 +152,26 @@ Com esse intervalo limitado, eliminam-se desvios padrão menores, o que pode sup
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/CodeCogsEqn(1).gif" | width=200 /></p>
   
 ### Algoritmos e técnicas
-Nesta seção, você deverá discutir os algoritmos e técnicas que você pretende utilizar para solucionar o problema. Você deverá justificar o uso de cada algoritmo ou técnica baseado nas características do problema e domínio do problema. Questões para se perguntar ao escrever esta seção:
-- _Os algoritmos que serão utilizados, incluindo quaisquer variáveis/parâmetros padrão do projeto, foram claramente definidos?_
-- _As técnicas a serem usadas foram adequadamente discutidas e justificadas?_
-- _Ficou claro como os dados de entrada ou conjuntos de dados serão controlados pelos algoritmos e técnicas escolhidas?_
+<p>Neste projeto foram aplicados os modelos de redes neurais por convolução e modelos de redes neurais recorrentes.</p>
+<p>Modelos de redes neurais profundas estão alcançando resultados de ponta para o reconhecimento da atividade humana. Eles são capazes de realizar o aprendizado de recursos automáticos a partir dos dados brutos do sensor e os modelos de desempenho superior se ajustam a recursos específicos do domínio criados manualmente.</p>
+
+<blockquote>
+  <p>
+   “[…], Os procedimentos de extração de características e construção de modelos são freqüentemente executados simultaneamente nos modelos de aprendizagem profunda. Os recursos podem ser aprendidos automaticamente através da rede, em vez de serem projetados manualmente. Além disso, a rede neural profunda também pode extrair uma representação de alto nível na camada profunda, o que a torna mais adequada para tarefas complexas de reconhecimento de atividades.”
+   </p>
+<p>— Deep Learning for Sensor-based Activity Recognition: A Survey, 2018.</p>
+ </blockquote>
+
+Existem duas abordagens principais para as redes neurais que são apropriadas para a classificação de séries temporais e que demonstraram ter um bom desempenho no reconhecimento de atividades usando dados de sensores de telefones inteligentes e dispositivos de rastreamento de condicionamento físico.
+
+Eles são modelos de redes neurais por convolução e modelos de redes neurais recorrentes.
+
+<blockquote>
+  <p>
+    “Recomenda-se que a RNN e a LSTM reconheçam atividades curtas que tenham ordem natural, enquanto a CNN é melhor em inferir atividades repetitivas a longo prazo. A razão é que a RNN poderia fazer uso da relação de ordem do tempo entre as leituras do sensor, e a CNN é mais capaz de aprender recursos profundos contidos em padrões recursivos.”
+    </p>
+<p>— Deep Learning for Sensor-based Activity Recognition: A Survey, 2018.</p>
+ </blockquote>
 
 ### Benchmark
 <p>O modelo de referência foi o trabalho de detecção de modo de transporte realizado por equipe da Universidade de Bolonha, Itália:</p>
