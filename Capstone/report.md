@@ -120,7 +120,8 @@ Cada janela também está associada a uma atividade específica. Uma determinada
 No projeto foram utilizadas as janelas de 5 segundos, equivalente a 1% dos dados brutos, e de 0,5 segundos, equivalente a 10% dos dados brutos.
 
 ### Visualização exploratória
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=500 /></p>
+<p><img src= "Udacity-Machine-Learning-Nanodegree/Capstone/Transportation Mode Using Count 0.5 seconds.png"/></p>
+
 Nesta seção, você precisará fornecer alguma forma de visualização que sintetize ou evidencie uma característica ou atributo relevante sobre os dados. A visualização deve sustentar adequadamente os dados utilizados. Discuta por que essa visualização foi escolhida e por que é relevante. Questões para se perguntar ao escrever esta seção:
 - _Você visualizou uma característica ou um atributo relevante acerca do conjunto de dados ou dados de entrada?_
 - _A visualização foi completamente analisada e discutida?_
