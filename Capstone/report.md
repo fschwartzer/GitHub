@@ -215,9 +215,12 @@ Optou-se pela utilização dos dados já balanceados, fornecidos pela equipe da 
 Da mesma forma, a equipe já fornece os dados com janelas de 5 segundos, equivalente a 1% dos dados brutos, e de 0,5 segundos, equivalente a 10% dos dados brutos.
 Com esses dados, foram criadas 6 bases de dados, 3 para cada janela. O primeiro conjunto de dados teve a utilização das informações do acelerômetro, giroscópio e som. O segundo conjunto de dados teve as informações de 8 sensores e o terceiro conjunto de dados utilizou todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade. Além dos atributos provenientes dos sensores, todas as bases de dados possuem o atributo tempo ('time').
 Criadas as 6 bases de dados, foram tratados os valores faltantes com a ferramenta fillna() da biblioteca Pandas.
-Finalmente, após a divisão da base de dados nas bases de treino e teste, foi utiliza a ferramenta MinMaxScaler da biblioteca Scikit-Learn, quando os dados foram escalados.
+Após a divisão da base de dados nas bases de treino e teste, foi utiliza a ferramenta MinMaxScaler da biblioteca Scikit-Learn, quando os dados foram escalados.
+As variáveis dependentes ('y_train' e  'y_test') foram codificadas e, com a ferramenta to_categorical da biblioteca Keras, os dados de vetor de classe (integers) foram convertidos em matriz de classe binária.
+Finalmente, as matrizes com as variáveis independentes ('X_train' e 'X_test') tiveram as suas formas expandidas com a inserção de um novo eixo com a ferramenta expand_dims da biblioteca Numpy.
 
 ### Implementação
+Converte um vetor de classe (integers) em matriz de classe binária.
 Nesta seção, o processo de escolha de quais métricas, algoritmos e técnicas deveriam ser implementados para os dados apresentados deve estar claramente documentado. Deve estar bastante claro como a implementação foi feita, e uma discussão deve ser elaborada a respeito de quaisquer complicações ocorridas durante o processo.  Questões para se perguntar ao escrever esta seção:
 - _Ficou claro como os algoritmos e técnicas foram implementados com os conjuntos de dados e os dados de entrada apresentados?_
 - _Houve complicações com as métricas ou técnicas originais que acabaram exigindo mudanças antes de chegar à solução?_
