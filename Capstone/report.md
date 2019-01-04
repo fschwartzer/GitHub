@@ -20,10 +20,7 @@ Historicamente, os dados dos sensores para reconhecimento de atividades eram dif
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Depiction-of-LSTM-RNN-for-Activity-Recognition.png" | width=500 /></p>
 
 ### Descrição do problema
-Nesta seção, você irá definir o problema que você está tentando resolver de forma clara, incluindo a estratégia (resumo das tarefas) que você irá utilizar para alcançar a solução desejada. Você deverá também discutir detalhadamente qual será a solução pretendida para este problema. Questões para se perguntar ao escrever esta seção:
-- _A enunciação do problema foi claramente definida? O leitor irá entender o que você está esperando resolver?_
-- _Você discutiu detalhadamente como irá tentar resolver o problema?_
-- _A solução antecipada está claramente definida? O leitor entenderá quais resultados você está procurando?_
+<p>O problema consiste na detecção do modo de transporte utilizado dada uma captura instantânea de dados captados por um determinado número de tipos de sensores. Enquadrado como uma tarefa de classificação de série temporal multivariada, é um problema desafiador, pois não há maneiras óbvias ou diretas de relacionar os dados do sensor registrado à atividades humanas específicas e cada sujeito pode realizar uma atividade com variação significativa, resultando em variações nos dados do sensor gravado. Foram utilizados dados registrados de sensores com as atividades correspondentes para assuntos específicos, com modelos ajustados a partir desses dados. Por fim, foi obtido um modelo otimizado que classifica a atividade de novos assuntos não vistos a partir de seus dados de sensor.</p>
 
 ### Métricas
 Nesta seção, você precisará definir claramente as métricas ou cálculos que você irá usar para avaliar o desempenho de um modelo ou resultado no seu projeto. Esses cálculos e métricas devem ser justificadas baseado nas características do problema e domínio do problema. Questões para se perguntar ao escrever esta seção:
