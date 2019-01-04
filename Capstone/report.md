@@ -126,7 +126,6 @@ No projeto foram utilizadas as janelas de 5 segundos, equivalente a 1% dos dados
 <li><strong>Janela de 0.5 segundos</strong></li>
 
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=800 /></p>
 
 <li><strong>Janela de 5 segundos</strong></li>
 
