@@ -125,26 +125,26 @@ No projeto foram utilizadas as janelas de 5 segundos, equivalente a 1% dos dados
 
 <li><strong>Janela de 0.5 segundos</strong></li>
 
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 0.5 seconds.png" | width=900 /></p>
 
 <li><strong>Janela de 5 segundos</strong></li>
 
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 5 seconds.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 5 seconds.png" | width=900 /></p>
 
 <p> Percebe-se que a amostra de dados para cada um dos Modos de Transporte está bem equilibrada.
   
 <li><strong>Distribuição dos dados por atributos</strong></li>
 A seguir são apresentados gráficos da distrubuição dos dados para cada um dos Modos de Transporte por atributo:
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Accelerometer.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Game Rotation Vector.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Gyroscope Uncalibrated.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Gyroscope.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Linear Acceleration.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Orientation.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Rotation Vector.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Sound.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Speed.png" | width=800 /></p>
-<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Time.png" | width=800 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Accelerometer.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Game Rotation Vector.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Gyroscope Uncalibrated.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Gyroscope.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Linear Acceleration.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Orientation.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Rotation Vector.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Sound.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Speed.png" | width=900 /></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Feature Distribution - Time.png" | width=900 /></p>
 <p>Percebe-se uma grande variação na escala dos dados, sendo necessário tratá-los para evitar que o desempenho preditivo dos algoritmos seja prejudicado.</p>
 <p>Por isso, os dados foram tratados com o MinMaxScaler da biblioteca Scikit-Learn. Nesta abordagem, os dados são escalados para um intervalo fixo - geralmente de 0 a 1.
 Com esse intervalo limitado, eliminam-se desvios padrão menores, o que pode suprimir o efeito de outliers.</p>
@@ -211,16 +211,27 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 ## III. Metodologia
 
 ### Pré-processamento de dados
-Optou-se pela utilização dos dados já balanceados, fornecidos pela equipe da Universidade de Bolonha. Nesses dados já houve um pré-processamento no sentido de equilibrar o número de amostras para cada um dos Modos de Transporte.
-Da mesma forma, a equipe já fornece os dados com janelas de 5 segundos, equivalente a 1% dos dados brutos, e de 0,5 segundos, equivalente a 10% dos dados brutos.
-Com esses dados, foram criadas 6 bases de dados, 3 para cada janela. O primeiro conjunto de dados teve a utilização das informações do acelerômetro, giroscópio e som. O segundo conjunto de dados teve as informações de 8 sensores e o terceiro conjunto de dados utilizou todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade. Além dos atributos provenientes dos sensores, todas as bases de dados possuem o atributo tempo ('time').
-Criadas as 6 bases de dados, foram tratados os valores faltantes com a ferramenta fillna() da biblioteca Pandas.
-Após a divisão da base de dados nas bases de treino e teste, foi utiliza a ferramenta MinMaxScaler da biblioteca Scikit-Learn, quando os dados foram escalados.
-As variáveis dependentes ('y_train' e  'y_test') foram codificadas e, com a ferramenta to_categorical da biblioteca Keras, os dados de vetor de classe (integers) foram convertidos em matriz de classe binária.
-Finalmente, as matrizes com as variáveis independentes ('X_train' e 'X_test') tiveram as suas formas expandidas com a inserção de um novo eixo com a ferramenta expand_dims da biblioteca Numpy.
+<p>Optou-se pela utilização dos dados já balanceados, fornecidos pela equipe da Universidade de Bolonha. Nesses dados já houve um pré-processamento no sentido de equilibrar o número de amostras para cada um dos Modos de Transporte.</p>
+<p>Da mesma forma, a equipe já fornece os dados com janelas de 5 segundos, equivalente a 1% dos dados brutos, e de 0,5 segundos, equivalente a 10% dos dados brutos.</p>
+<p>Com esses dados, foram criadas 6 bases de dados, 3 para cada janela. O primeiro conjunto de dados teve a utilização das informações do acelerômetro, giroscópio e som. O segundo conjunto de dados teve as informações de 8 sensores e o terceiro conjunto de dados utilizou todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade. Além dos atributos provenientes dos sensores, todas as bases de dados possuem o atributo tempo ('time').</p>
+<p>Criadas as 6 bases de dados, foram tratados os valores faltantes com a ferramenta fillna() da biblioteca Pandas.</p>
+<p>Após a divisão das bases de dados nas bases de treino e teste, foi utiliza a ferramenta MinMaxScaler da biblioteca Scikit-Learn, quando os dados foram escalados.</p>
+<p>As variáveis dependentes ('y_train' e  'y_test') foram codificadas e, com a ferramenta to_categorical da biblioteca Keras, os dados de vetor de classe (integers) foram convertidos em matriz de classe binária.</p>
+<p>Finalmente, as matrizes com as variáveis independentes ('X_train' e 'X_test') tiveram as suas formas expandidas com a inserção de um novo eixo com a ferramenta expand_dims da biblioteca Numpy.</p>
 
 ### Implementação
-Converte um vetor de classe (integers) em matriz de classe binária.
+<li><strong>CNNs</strong></li>
+<p>Inicialmente foi definida uma função evaluate_model(), que utiliza os dados de treino e teste, ajusta um modelo no conjunto de dados de treinamento, avalia-o no conjunto de dados de teste e retorna uma estimativa do desempenho do modelo.</p>
+<p>Definiu-se o modelo CNN usando a biblioteca de aprendizagem profunda Keras, com duas camadas 1D CNN, seguidas por uma camada de Dropout para regularização e depois uma camada de Pooling.</p>
+<p>A escolha pelas duas camadas 1D CNN se deu pela possibilidade de melhorar as chances de aprendizagem com os dados de entrada.</p>
+<p>Como as CNNs aprendem rapidamente, a camada de Dropout desacelera um pouco o processo de aprendizado visando um melhor modelo final.</p>
+<p>A camada de Pooling reduz os recursos aprendidos para 1/4 de seu tamanho, consolidando-os apenas nos elementos mais essenciais.</p>
+<p>Após o CNN e o pooling, os recursos aprendidos são achatados em um vetor longo e passam por uma camada totalmente conectada antes da camada de saída usada para fazer uma previsão. A camada totalmente conectada idealmente fornece um buffer entre os recursos aprendidos e a saída com a intenção de interpretar os recursos aprendidos antes de fazer uma previsão.</p>
+<p>Foram utilizadas configurações de "filters' com tamanho 64 e um tamanho de kernel de 3. Os 'filter' são mapas de recursos, mais precisamente o número de vezes que a entrada é processada ou interpretada, enquanto o tamanho do kernel é o número de etapas de tempo de entrada em que a sequência de entrada é lida ou processada nos mapas de recursos.</p>
+<p>A versão do gradiente descendente estocástico 'Adam' foi usada para otimizar a rede, e também a função de perda de entropia cruzada categórica foi utilizada, uma vez que se trata de um problema de classificação de várias classes.</p>
+<p>O modelo foi ajustado para um número fixo de épocas, neste caso 10, e um tamanho de lote de 32 amostras, onde 32 janelas de dados são expostas ao modelo antes que os pesos do modelo sejam atualizados.</p>
+<p>Depois que o modelo é ajustado, ele é avaliado no conjunto de dados de teste e a precisão é retornada.</p>
+
 Nesta seção, o processo de escolha de quais métricas, algoritmos e técnicas deveriam ser implementados para os dados apresentados deve estar claramente documentado. Deve estar bastante claro como a implementação foi feita, e uma discussão deve ser elaborada a respeito de quaisquer complicações ocorridas durante o processo.  Questões para se perguntar ao escrever esta seção:
 - _Ficou claro como os algoritmos e técnicas foram implementados com os conjuntos de dados e os dados de entrada apresentados?_
 - _Houve complicações com as métricas ou técnicas originais que acabaram exigindo mudanças antes de chegar à solução?_
