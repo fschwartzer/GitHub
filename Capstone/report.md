@@ -23,10 +23,18 @@ Historicamente, os dados dos sensores para reconhecimento de atividades eram dif
 <p>O problema consiste na detecção do modo de transporte utilizado dada uma captura instantânea de dados captados por um determinado número de tipos de sensores. Enquadrado como uma tarefa de classificação de série temporal multivariada, é um problema desafiador, pois não há maneiras óbvias ou diretas de relacionar os dados do sensor registrado à atividades humanas específicas e cada sujeito pode realizar uma atividade com variação significativa, resultando em variações nos dados do sensor gravado. Foram utilizados dados registrados de sensores com as atividades correspondentes para assuntos específicos, com modelos ajustados a partir desses dados. Por fim, foi obtido um modelo otimizado que classifica a atividade de novos assuntos não vistos a partir de seus dados de sensor.</p>
 
 ### Métricas
-Nesta seção, você precisará definir claramente as métricas ou cálculos que você irá usar para avaliar o desempenho de um modelo ou resultado no seu projeto. Esses cálculos e métricas devem ser justificadas baseado nas características do problema e domínio do problema. Questões para se perguntar ao escrever esta seção:
-- _As métricas que você escolheu para medir o desempenho de seus modelos foram discutidas e definidas de forma clara?_
-- _Você forneceu justificativas razoáveis para as métricas escolhidas, baseando-se no problema e solução?_
+<p>A métrica de avaliação que foi utilizada para quantificar o desempenho tanto do modelo de benchmark como dos modelos de solução apresentados foi a Acurácia.</p>
 
+<img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/acuracia.png" />
+
+<p>Acurácia geral com todos os quatro algoritmos de classificação do modelo de benchmark:</p>
+
+| Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 |  
+|---|:---:|:---:|:---:|
+| Decision Tree (DT) | 76% | 78% | 86% |
+| Random Forest (RF) | 81% | 89% | 93% |
+| Support Vector Machine (SVM) | 76% | 86% | 90% |
+| Neural Network (NN) | 76% | 87% | 91% | 
 
 ## II. Análise
 _(aprox. 2-4 páginas)_
