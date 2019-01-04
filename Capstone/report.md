@@ -158,9 +158,38 @@ Nesta seção, você deverá discutir os algoritmos e técnicas que você preten
 - _Ficou claro como os dados de entrada ou conjuntos de dados serão controlados pelos algoritmos e técnicas escolhidas?_
 
 ### Benchmark
-Nesta  seção, você deverá definir claramente um resultado de referência (benchmark) ou limiar para comparar entre desempenhos obtidos pela sua solução. O raciocínio por trás da referência (no caso onde não é estabelecido um resultado) deve ser discutido. Questões para se perguntar ao escrever esta seção:
-- _Algum resultado ou valor que funcione como referência para a medida de desempenho foi fornecido?_
-- _Ficou claro como esse resultado ou valor foi obtido (seja por dados ou por hipóteses)?_
+<p>O modelo de referência foi o trabalho de detecção de modo de transporte realizado por equipe da Universidade de Bolonha, Itália:</p>
+
+    @article {carpineti18,
+    Author = {Claudia Carpineti, Vincenzo Lomonaco, Luca Bedogni, Marco Di Felice, Luciano Bononi},
+    Journal = {Proc. of the 14th Workshop on Context and Activity Modeling and Recognition (IEEE COMOREA 2018)},
+    Title = {Custom Dual Transportation Mode Detection by Smartphone Devices Exploiting Sensor Diversity},
+    Year = {2018}
+    }
+    
+<p>Pré-impressão disponível: https://arxiv.org/abs/1810.05596</p>
+<p>Em seu trabalho, utilizaram 3 conjuntos de dados, aplicando 4 algoritmos.
+Para cada conjunto, foram construídos quatro modelos com quatro algoritmos de classificação diferentes:</p>
+<ul>
+  <li>Decision Trees (DT)</li>
+  <li>Random Forest (RF)</li>
+  <li>Support Vector Machines(SVM)</li>
+  <li>Neural Network (NN)</li>
+</ul>
+
+<p>Os sensores incluídos no primeiro conjunto (parâmetro 1) foram acelerômetro, som e giroscópio. Esses três sensores possuem os maiores valores de precisão obtidos individualmente.</p>
+<p>O primeiro conjunto de dados é formado por doze recursos, quatro para cada sensor. Foi realizada a classificação com os quatro algoritmos de classificação mencionados anteriormente. A precisão geral dos algoritmos está entre 82% e 88%. Mesmo que a floresta aleatória produza os maiores valores de precisão (88%), todos os algoritmos têm um desempenho substancialmente bom.
+Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes, exceto a velocidade, para fins de economia de bateria, foram alcançados melhores resultados em termos de precisão. Com o segundo conjunto de dados, formado por oito sensores e trinta e dois recursos, a precisão aumenta até valores entre 86% e 93%.</p>
+<p>Por fim, foi treinado um modelo no terceiro conjunto de dados formado por todos os nove sensores relevantes e trinta e seis recursos, diferindo do anterior apenas para recursos derivados de velocidade. O resultado mostra como se considera a velocidade, aumentando ainda mais a capacidade do modelo de inferir qual modo de transporte o usuário está usando no momento. Neste último caso, a precisão atingiu um nível de alcance entre 91% e 96%.</p>
+
+<p>Acurácia geral com todos os quatro algoritmos de classificação do modelo de benchmark:</p>
+
+| Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 |  
+|---|:---:|:---:|:---:|
+| Decision Tree (DT) | 76% | 78% | 86% |
+| Random Forest (RF) | 81% | 89% | 93% |
+| Support Vector Machine (SVM) | 76% | 86% | 90% |
+| Neural Network (NN) | 76% | 87% | 91% | 
 
 
 ## III. Metodologia
