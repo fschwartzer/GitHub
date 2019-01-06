@@ -131,7 +131,7 @@ No projeto foram utilizadas as janelas de 5 segundos, equivalente a 1% dos dados
 
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Transportation Mode Using Count 5 seconds.png" | width=900 /></p>
 
-<p> Percebe-se que a amostra de dados para cada um dos Modos de Transporte está bem equilibrada.
+<p> Percebe-se que a amostra de dados para cada um dos Modos de Transporte está bem equilibrada.</p>
   
 <li><strong>Distribuição dos dados por atributos</strong></li>
 A seguir são apresentados gráficos da distrubuição dos dados para cada um dos Modos de Transporte por atributo:
@@ -300,12 +300,14 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <li>Kernel: 5</li>
 <li>Epochs: 80</li>
 <li>Batch Size: 32</li>
+<p></p>
 <p>Entretanto, com a utilização dos hiperparâmetros acima, o modelo apresentou alta variância, talvez decorrente de um sobreajuste (Overfitting).</p>
 <p>Assim, o modelo final utilizou os seguintes parâmetros:</p>
 <li>Filters: 64</li>
 <li>Kernel: 5</li>
 <li>Epochs: 80</li>
 <li>Batch Size: 32</li>
+<p></p>
 <p>O modelo obteve a pontuação a seguir descrita:</p>
 <li>#1: 95.246</li>
 <li>#2: 96.109</li>
@@ -317,11 +319,11 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <li>#8: 95.358</li>
 <li>#9: 95.310</li>
 <li>#10: 94.687</li>
+<p></p>
 <p>[95.24646480786132, 96.10929136374531, 93.65662698729727, 92.68994167979233, 94.72717104737556, 96.48478069872657, 93.39298554014225, 95.35831269473516, 95.31037788655112, 94.68722537349204]</p>
 <p>Accuracy: 94.766% (+/-1.143)</p>
 
 ### Justificativa
-
 <li><strong>Benchmark</strong></li>
 
 | Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 |  
@@ -339,21 +341,17 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 | Recurrent Neural Network (RNN) | 62% | 80% | 81% | 87% |
 
 <p>* Janela de 0.5 segundos.</p>
-
-Nesta seção, a solução final do seu modelo e os resultados dela obtidos devem ser comparados aos valores de referência (benchmark) que você estabeleceu anteriormente no projeto, usando algum tipo de análise estatística. Você deverá também justificar se esses resultados e a solução são significativas o suficiente para ter resolvido o problema apresentado no projeto. Questões para se perguntar ao escrever esta seção:
-- _Os resultados finais encontrados são mais fortes do que a referência reportada anteriormente?_
-- _Você analisou e discutiu totalmente a solução final?_
-- _A solução final é significativa o suficiente para ter resolvido o problema?_
-
+<p></p>
+<p>As Redes Neurais Convolucionais (CNN) alcançaram muito bom resultado com a base de dados mais robusta (9 sensores e janela de 0.5 segundos), demonstrando ser uma solução significativa para resolver o problema da detecção do Modo de Transporte com a utilização de dados provenientes dos sensores de telefones celulares.</p>
 
 ## V. Conclusão
-_(aprox. 1-2 páginas)_
 
-### Foma livre de visualização
-Nesta seção, você deverá fornecer alguma forma de visualização que enfatize uma qualidade importante do projeto. A visualização é de forma livre, mas deve sustentar de forma razoável um resultado ou característica relevante sobre o problema que você quer discutir. Questões para se perguntar ao escrever esta seção:
-- _Você visualizou uma qualidade importante ou relevante acerca do problema, conjunto de dados, dados de entrada, ou resultados?_
-- _A visualização foi completamente analisada e discutida?_
-- _Se um gráfico foi fornecido, os eixos, títulos e dados foram claramente definidos?_
+### Tamanho da base de dados
+<p>Um importante aspecto que pode ser observado ao longo do projeto foi que o aprendizado profundo e outras técnicas modernas de aprendizado de máquina não-linear melhoram com mais dados.</p>
+<p>Num primeiro momento se procurou obter a melhor performance possível com a menor base de dados possível, visando a utilização ótima dos recursos computacionais</p>
+<p>Entranto, a utilização de uma base de dados mais robusta trouxe pontuações mais substanciais para o modelo, sem prejuízo considerável no tempo de processamento.</p>
+<p>O gráfico abaixo demonstra como os algoritmos de aprendizagem profunda tem uma melhor performance com uma maior quantidade de dados em relação aos demais algoritmos de aprendizagem de máquina:</p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Performance X Amount Data.png" | width=600 /></p>
 
 ### Reflexão
 Nesta seção, você deverá resumir os procedimentos desde o problema até a solução e discutir um ou dois aspectos  do projeto que você achou particularmente interessante ou difícil. É esperado que você reflita sobre o projeto como um todo de forma a mostrar que você possui um entendimento sólido de todo o processo empregado em seu trabalho. Questões para se perguntar ao escrever esta seção:
