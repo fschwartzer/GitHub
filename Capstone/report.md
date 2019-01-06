@@ -1,7 +1,7 @@
 # Nanodegree Engenheiro de Machine Learning
 ## Projeto final
 <p>Fernando Roberto Schwartzer</p>
-<p>02 de janeiro de 2019</p>
+<p>05 de janeiro de 2019</p>
 
 ## I. Definição
 <Strong>Detecção do Modo de Transporte com modelos de Redes Neurais por Convolução (CNN) e modelos de Redes Neurais Recorrentes (RNN)</Strong>
@@ -251,6 +251,20 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p>A amostra de pontuações pode ser resumida calculando e relatando a média e o desvio padrão do desempenho. A média fornece a precisão média do modelo no conjunto de dados, enquanto o desvio padrão fornece a variância média da precisão da média.</p>
 
 ### Refinamento
+<li><strong>CNNs</strong></li>
+<p>No processo de aperfeiçoamento do modelo, foram explorados vários hiperparâmetros do modelo.</p>
+<p><strong>Número de filtros ('Filters')</strong></p>
+<p>Um hiperparâmetro importante para a CNN é o número de mapas de filtro. Foram experimentados uma gama de valores diferentes, de menos a muitos mais do que os 64 usados no primeiro modelo desenvolvido.</p>
+<p>Especificamente, foram testados os seguintes números de mapas de recursos:</p>
+<p>n_params = [8, 16, 32, 64, 128, 256]</p>
+<p><strong>Tamanho do Kernel</strong></p>
+<p>O tamanho do kernel é outro hiperparâmetro importante da CND 1D para sintonizar.</p>
+<p>O tamanho do kernel controla o número de etapas de tempo consideradas em cada “leitura” da sequência de entrada, que é então projetada no mapa de características (através do processo convolucional).</p>
+<p>Um tamanho de kernel grande significa uma leitura menos rigorosa dos dados, mas pode resultar em um instantâneo mais generalizado da entrada.</p>
+<p>Foi usada a mesma configuração experimental e testado um conjunto de diferentes tamanhos de kernel, além do padrão de três etapas de tempo. A lista completa de valores é a seguinte:</p>
+<p>n_params = [2, 3, 5]</p>
+
+
 Nesta seção, você deverá discutir o processo de aperfeiçoamento dos algoritmos e técnicas usados em sua implementação. Por exemplo, ajuste de parâmetros para que certos modelos obtenham melhores soluções está dentro da categoria de refinamento. Suas soluções inicial e final devem ser registradas, bem como quaisquer outros resultados intermediários significativos, conforme o necessário. Questões para se perguntar ao escrever esta seção:
 - _Uma solução inicial foi encontrada e claramente reportada?_
 - _O processo de melhoria foi documentado de foma clara, bem como as técnicas utilizadas?_
