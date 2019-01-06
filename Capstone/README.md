@@ -9,14 +9,18 @@
 
 ### Bibliotecas necessárias
 <li>Pandas v0.23.4
+  
 ```
 conda install -c anaconda pandas
 ```
+
 </li>
 <li>Numpy v1.15
+  
 ```
 conda install -c anaconda numpy
 ```
+
 </li>
 
 
