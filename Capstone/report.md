@@ -295,12 +295,30 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/filters.png" | width=900 /></p>
 <p><strong>Kernel</strong></p>
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/kernel.png" | width=900 /></p>
-
-Nesta seção, o modelo final e quaisquer qualidades que o sustentem devem ser avaliadas em detalhe. Deve ficar claro como o modelo final foi obtido e por que tal modelo foi escolhido. Além disso, algum tipo de análise deve ser realizada para validar a robustez do modelo e sua solução, como, por exemplo, manipular os dados de entrada ou o ambiente para ver como a solução do modelo é afetada (técnica chamada de análise sensitiva). Questões para se perguntar ao escrever esta seção:
-- _O modelo final é razoável e alinhado com as expectativas de solução? Os parâmetros finais do modelo são apropriados?_
-- _O modelo final foi testado com várias entradas para avaliar se o modelo generaliza bem com dados não vistos?_
--_O modelo é robusto o suficiente para o problema? Pequenas perturbações (mudanças) nos dados de treinamento ou no espaço de entrada afetam os resultados de forma considerável?_
-- _Os resultados obtidos do modelo são confiáveis?_
+</p>Numa primeira abordagem, para o modelo final, foram utilizados os melhores resultados para cada um dos parâmetros:</p>
+<li>Filters: 256</li>
+<li>Kernel: 5</li>
+<li>Epochs: 80</li>
+<li>Batch Size: 32</li>
+<p>Entretanto, com a utilização dos hiperparâmetros acima, o modelo apresentou alta variância, talvez decorrente de um sobreajuste (Overfitting).</p>
+<p>Assim, o modelo final utilizou os seguintes parâmetros:</p>
+<li>Filters: 64</li>
+<li>Kernel: 5</li>
+<li>Epochs: 80</li>
+<li>Batch Size: 32</li>
+<p>O modelo obteve a pontuação a seguir descrita:</p>
+<li>#1: 95.246</li>
+<li>#2: 96.109</li>
+<li>#3: 93.657</li>
+<li>#4: 92.690</li>
+<li>#5: 94.727</li>
+<li>#6: 96.485</li>
+<li>#7: 93.393</li>
+<li>#8: 95.358</li>
+<li>#9: 95.310</li>
+<li>#10: 94.687</li>
+<p>[95.24646480786132, 96.10929136374531, 93.65662698729727, 92.68994167979233, 94.72717104737556, 96.48478069872657, 93.39298554014225, 95.35831269473516, 95.31037788655112, 94.68722537349204]</p>
+<p>Accuracy: 94.766% (+/-1.143)</p>
 
 ### Justificativa
 
