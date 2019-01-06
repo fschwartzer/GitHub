@@ -293,6 +293,7 @@ Nesta seção, o modelo final e quaisquer qualidades que o sustentem devem ser a
 ### Justificativa
 
 <li><strong>Benchmark</strong></li>
+
 | Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 |  
 |---|:---:|:---:|:---:|
 | Decision Tree (DT) | 76% | 78% | 86% |
@@ -301,10 +302,12 @@ Nesta seção, o modelo final e quaisquer qualidades que o sustentem devem ser a
 | Neural Network (NN) | 76% | 87% | 91% |
 
 <li><strong>Projeto</strong></li>
+
 | Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 | Accuracy of D3* |    
 |---|:---:|:---:|:---:|:---:|
 | Convolutional Neural Network (CNN) | 67% | 85% | 89% | 95% |
 | Recurrent Neural Network (RNN) | 62% | 80% | 81% | 87% |
+
 <p>* Janela de 0.5 segundos.</p>
 
 Nesta seção, a solução final do seu modelo e os resultados dela obtidos devem ser comparados aos valores de referência (benchmark) que você estabeleceu anteriormente no projeto, usando algum tipo de análise estatística. Você deverá também justificar se esses resultados e a solução são significativas o suficiente para ter resolvido o problema apresentado no projeto. Questões para se perguntar ao escrever esta seção:
