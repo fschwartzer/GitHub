@@ -228,15 +228,18 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p>A camada de Pooling reduz os recursos aprendidos para 1/4 de seu tamanho, consolidando-os apenas nos elementos mais essenciais.</p>
 <p>Após o CNN e o pooling, os recursos aprendidos são achatados em um vetor longo e passam por uma camada totalmente conectada antes da camada de saída usada para fazer uma previsão. A camada totalmente conectada idealmente fornece um buffer entre os recursos aprendidos e a saída com a intenção de interpretar os recursos aprendidos antes de fazer uma previsão.</p>
 <p>Foram utilizadas configurações de "filters' com tamanho 64 e um tamanho de kernel de 3. Os 'filter' são mapas de recursos, mais precisamente o número de vezes que a entrada é processada ou interpretada, enquanto o tamanho do kernel é o número de etapas de tempo de entrada em que a sequência de entrada é lida ou processada nos mapas de recursos.</p>
-<p>A versão do gradiente descendente estocástico 'Adam' foi usada para otimizar a rede, e também a função de perda de entropia cruzada categórica foi utilizada, uma vez que se trata de um problema de classificação de várias classes.</p>
+<p>A versão do gradiente descendente estocástico 'Adam' foi usada para otimizar a rede e também a função de perda de entropia cruzada categórica foi utilizada, uma vez que se trata de um problema de classificação de várias classes.</p>
 <p>O modelo foi ajustado para um número fixo de épocas, neste caso 10, e um tamanho de lote de 32 amostras, onde 32 janelas de dados são expostas ao modelo antes que os pesos do modelo sejam atualizados.</p>
 <p>Depois que o modelo é ajustado, ele é avaliado no conjunto de dados de teste e a precisão é retornada.</p>
+<p>Entretanto, não podemos julgar a habilidade do modelo a partir de uma única avaliação.</p>
+<p>A razão para isso é que as redes neurais são estocásticas, o que significa que a cada avaliação um modelo diferente resultará ao treinar a mesma configuração com os mesmos dados.</p>
+<p>Esta é uma característica da rede na medida em que dá ao modelo sua capacidade adaptativa, mas requer uma avaliação um pouco mais complexa.</p>
+<p>A avaliação do modelo é repetida um determinado número de vezes e, em seguida, é realizado um resumo do desempenho do modelo em cada uma dessas execuções. Por exemplo, evaluate_model () pode ser executado num total de 10 vezes. Isso resultará em uma população de pontuações de avaliação de modelo que devem ser resumidas.</p>
+<p>A amostra de pontuações pode ser resumida calculando e relatando a média e o desvio padrão do desempenho. A média fornece a precisão média do modelo no conjunto de dados, enquanto o desvio padrão fornece a variância média da precisão da média.</p>
 
-Nesta seção, o processo de escolha de quais métricas, algoritmos e técnicas deveriam ser implementados para os dados apresentados deve estar claramente documentado. Deve estar bastante claro como a implementação foi feita, e uma discussão deve ser elaborada a respeito de quaisquer complicações ocorridas durante o processo.  Questões para se perguntar ao escrever esta seção:
-- _Ficou claro como os algoritmos e técnicas foram implementados com os conjuntos de dados e os dados de entrada apresentados?_
-- _Houve complicações com as métricas ou técnicas originais que acabaram exigindo mudanças antes de chegar à solução?_
-- _Houve qualquer parte do processo de codificação (escrita de funções complicadas, por exemplo) que deveriam ser documentadas?_
-
+<li><strong>RNNs</strong></li>
+<p>
+  
 ### Refinamento
 Nesta seção, você deverá discutir o processo de aperfeiçoamento dos algoritmos e técnicas usados em sua implementação. Por exemplo, ajuste de parâmetros para que certos modelos obtenham melhores soluções está dentro da categoria de refinamento. Suas soluções inicial e final devem ser registradas, bem como quaisquer outros resultados intermediários significativos, conforme o necessário. Questões para se perguntar ao escrever esta seção:
 - _Uma solução inicial foi encontrada e claramente reportada?_
