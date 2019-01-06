@@ -227,7 +227,7 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p>Como as CNNs aprendem rapidamente, a camada de Dropout desacelera um pouco o processo de aprendizado visando um melhor modelo final.</p>
 <p>A camada de Pooling reduz os recursos aprendidos para 1/4 de seu tamanho, consolidando-os apenas nos elementos mais essenciais.</p>
 <p>Após o CNN e o pooling, os recursos aprendidos são achatados em um vetor longo e passam por uma camada totalmente conectada antes da camada de saída usada para fazer uma previsão. A camada totalmente conectada idealmente fornece um buffer entre os recursos aprendidos e a saída com a intenção de interpretar os recursos aprendidos antes de fazer uma previsão.</p>
-<p>Foram utilizadas configurações de "filters' com tamanho 64 e um tamanho de kernel de 3. Os 'filter' são mapas de recursos, mais precisamente o número de vezes que a entrada é processada ou interpretada, enquanto o tamanho do kernel é o número de etapas de tempo de entrada em que a sequência de entrada é lida ou processada nos mapas de recursos.</p>
+<p>Foram utilizadas configurações de 'filters' com tamanho 64 e um tamanho de kernel de 3. Os 'filters' são mapas de recursos, mais precisamente o número de vezes que a entrada é processada ou interpretada, enquanto o tamanho do kernel é o número de etapas de tempo de entrada em que a sequência de entrada é lida ou processada nos mapas de recursos.</p>
 <p>A versão do gradiente descendente estocástico 'Adam' foi usada para otimizar a rede e também a função de perda de entropia cruzada categórica foi utilizada, uma vez que se trata de um problema de classificação de várias classes.</p>
 <p>O modelo foi ajustado para um número fixo de épocas, neste caso 10, e um tamanho de lote de 32 amostras, onde 32 janelas de dados são expostas ao modelo antes que os pesos do modelo sejam atualizados.</p>
 <p>Depois que o modelo é ajustado, ele é avaliado no conjunto de dados de teste e a precisão é retornada.</p>
@@ -252,23 +252,32 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 
 ### Refinamento
 <li><strong>CNNs</strong></li>
-<p>No processo de aperfeiçoamento do modelo, foram explorados vários hiperparâmetros do modelo.</p>
+<p>No processo de aperfeiçoamento do modelo, foram explorados vários hiperparâmetros..</p>
 <p><strong>Número de filtros ('Filters')</strong></p>
 <p>Um hiperparâmetro importante para a CNN é o número de mapas de filtro. Foram experimentados uma gama de valores diferentes, de menos a muitos mais do que os 64 usados no primeiro modelo desenvolvido.</p>
 <p>Especificamente, foram testados os seguintes números de mapas de recursos:</p>
 <p>n_params = [8, 16, 32, 64, 128, 256]</p>
 <p><strong>Tamanho do Kernel</strong></p>
-<p>O tamanho do kernel é outro hiperparâmetro importante da CND 1D para sintonizar.</p>
+<p>O tamanho do kernel é outro hiperparâmetro importante da CND 1D para se ajustar.</p>
 <p>O tamanho do kernel controla o número de etapas de tempo consideradas em cada “leitura” da sequência de entrada, que é então projetada no mapa de características (através do processo convolucional).</p>
 <p>Um tamanho de kernel grande significa uma leitura menos rigorosa dos dados, mas pode resultar em um instantâneo mais generalizado da entrada.</p>
 <p>Foi usada a mesma configuração experimental e testado um conjunto de diferentes tamanhos de kernel, além do padrão de três etapas de tempo. A lista completa de valores é a seguinte:</p>
 <p>n_params = [2, 3, 5]</p>
+<p><strong>Rede Neural Convolucional Multi-Headed</strong></p>
+<p>Outra abordagem popular com CNNs é ter um modelo de múltiplas cabeças, onde cada cabeçote do modelo lê os passos de tempo de entrada usando um kernel de tamanho diferente.</p>
+<p>Por exemplo, um modelo de três cabeças pode ter três tamanhos diferentes de kernel de 3, 5, 11, permitindo que o modelo leia e interprete os dados da sequência em três resoluções diferentes. As interpretações de todas as três cabeças são então concatenadas dentro do modelo e interpretadas por uma camada totalmente conectada antes que uma previsão seja feita.</p>
+<p><strong>Número de épocas ('Epochs')</strong></p>
+<p>O número de épocas é um hiperparâmetro que define o número de vezes que o algoritmo de aprendizado funcionará em todo o conjunto de dados de treinamento.</p>
+<p>Uma época significa que cada amostra no conjunto de dados de treinamento teve a oportunidade de atualizar os parâmetros do modelo interno. Uma época é composta por um ou mais lotes.</p>
+<p>Especificamente, foram testados os seguintes números épocas:</p>
+<p>n_params = [10, 20, 40, 80]</p>
+<p><strong>Tamanho do lote ('Batch Size')</strong></p>
+<p>O tamanho do lote é um hiperparâmetro que define o número de amostras para trabalhar antes de atualizar os parâmetros internos do modelo.</p>
+<p>Um lote pode ser pensado como um loop para iterar sobre uma ou mais amostras e fazer previsões. No final do lote, as previsões são comparadas com as variáveis de saída esperadas e um erro é calculado. A partir desse erro, o algoritmo de atualização é usado para melhorar o modelo, por exemplo, mover para baixo ao longo do gradiente de erro.</p>
+<p>Foram testados os seguintes tamanhos de lote:</p>
+<p>n_params = [32, 64, 128]</p>
 
-
-Nesta seção, você deverá discutir o processo de aperfeiçoamento dos algoritmos e técnicas usados em sua implementação. Por exemplo, ajuste de parâmetros para que certos modelos obtenham melhores soluções está dentro da categoria de refinamento. Suas soluções inicial e final devem ser registradas, bem como quaisquer outros resultados intermediários significativos, conforme o necessário. Questões para se perguntar ao escrever esta seção:
-- _Uma solução inicial foi encontrada e claramente reportada?_
-- _O processo de melhoria foi documentado de foma clara, bem como as técnicas utilizadas?_
-- _As soluções intermediárias e finais foram reportadas claramente, conforme o processo foi sendo melhorado?_
+<li><strong>RNNs</strong></li>
 
 
 ## IV. Resultados
