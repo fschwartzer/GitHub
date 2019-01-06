@@ -282,7 +282,6 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p>Por isso, buscando um refinamento e no intuito de agregar as qualidades das CNNs, foi testada uma arquitetura CNN LSTM, que envolve o uso de camadas CNN (Convolutional Neural Network) para extração de características em dados de entrada combinados com LSTMs (RNN) para suportar a previsão de seqüências.
 
 ## IV. Resultados
-_(aprox. 2-3 páginas)_
 
 ### Modelo de avaliação e validação
 Nesta seção, o modelo final e quaisquer qualidades que o sustentem devem ser avaliadas em detalhe. Deve ficar claro como o modelo final foi obtido e por que tal modelo foi escolhido. Além disso, algum tipo de análise deve ser realizada para validar a robustez do modelo e sua solução, como, por exemplo, manipular os dados de entrada ou o ambiente para ver como a solução do modelo é afetada (técnica chamada de análise sensitiva). Questões para se perguntar ao escrever esta seção:
@@ -292,6 +291,22 @@ Nesta seção, o modelo final e quaisquer qualidades que o sustentem devem ser a
 - _Os resultados obtidos do modelo são confiáveis?_
 
 ### Justificativa
+
+<li><strong>Benchmark</strong></li>
+| Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 |  
+|---|:---:|:---:|:---:|
+| Decision Tree (DT) | 76% | 78% | 86% |
+| Random Forest (RF) | 81% | 89% | 93% |
+| Support Vector Machine (SVM) | 76% | 86% | 90% |
+| Neural Network (NN) | 76% | 87% | 91% |
+
+<li><strong>Projeto</strong></li>
+| Algorithm | Accuracy on D1 | Accuracy on D2 | Accuracy of D3 | Accuracy of D3* |    
+|---|:---:|:---:|:---:|:---:|
+| Convolutional Neural Network (CNN) | 67% | 85% | 89% | 95% |
+| Recurrent Neural Network (RNN) | 62% | 80% | 81% | 87% |
+<p>* Janela de 0.5 segundos.</p>
+
 Nesta seção, a solução final do seu modelo e os resultados dela obtidos devem ser comparados aos valores de referência (benchmark) que você estabeleceu anteriormente no projeto, usando algum tipo de análise estatística. Você deverá também justificar se esses resultados e a solução são significativas o suficiente para ter resolvido o problema apresentado no projeto. Questões para se perguntar ao escrever esta seção:
 - _Os resultados finais encontrados são mais fortes do que a referência reportada anteriormente?_
 - _Você analisou e discutiu totalmente a solução final?_
