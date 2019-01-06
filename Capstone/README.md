@@ -11,13 +11,13 @@ Built with Python3.6
 <li>Pandas v0.23.4
   
 The release can be installed with conda from conda-forge or the default channel:
-'''
+```
 conda install pandas
-'''
+```
 Or via PyPI:
-'''
+```
 python3 -m pip install --upgrade pandas
-'''
+```
 </li>
 <li>Numpy</li>
 <li>
