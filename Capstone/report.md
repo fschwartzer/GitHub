@@ -278,7 +278,8 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p>n_params = [32, 64, 128]</p>
 
 <li><strong>RNNs</strong></li>
-
+<p>Os modelos com RNN apresentaram um maior tempo de processamento e resultados inferiores em relação aos modelos com CNN.</p>
+<p>Por isso, buscando um refinamento e no intuito de agregar as qualidades das CNNs, foi testada uma arquitetura CNN LSTM, que envolve o uso de camadas CNN (Convolutional Neural Network) para extração de características em dados de entrada combinados com LSTMs (RNN) para suportar a previsão de seqüências.
 
 ## IV. Resultados
 _(aprox. 2-3 páginas)_
