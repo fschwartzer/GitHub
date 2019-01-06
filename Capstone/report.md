@@ -1,7 +1,7 @@
 # Nanodegree Engenheiro de Machine Learning
 ## Projeto final
 <p>Fernando Roberto Schwartzer</p>
-<p>05 de janeiro de 2019</p>
+<p>06 de janeiro de 2019</p>
 
 ## I. Definição
 <Strong>Detecção do Modo de Transporte com modelos de Redes Neurais por Convolução (CNN) e modelos de Redes Neurais Recorrentes (RNN)</Strong>
@@ -354,26 +354,23 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/Performance X Amount Data.png" | width=600 /></p>
 
 ### Reflexão
-Nesta seção, você deverá resumir os procedimentos desde o problema até a solução e discutir um ou dois aspectos  do projeto que você achou particularmente interessante ou difícil. É esperado que você reflita sobre o projeto como um todo de forma a mostrar que você possui um entendimento sólido de todo o processo empregado em seu trabalho. Questões para se perguntar ao escrever esta seção:
-- _Você resumiu inteiramente o processo que você utilizou neste projeto?_
-- _Houve algum aspecto interessante do projeto?_
-- _Houve algum aspecto difícil do projeto?_
-- _O modelo e solução final alinham-se com suas expectativas para o problema, e devem ser usadas de forma geral para resolver esses tipos de problemas?_
+<p>A utilização das Redes Neurais por Convolução e Redes Neurais Recorrentes foi um grande desafio, tanto nas questões referentes à dimensionalidade dos dados esperada pelo algoritmo, quanto nas questões dos ajustes nos hiperparâmetros.</p>
+<p>A otimização de modelos é um dos maiores desafios na implementação de soluções de aprendizado de máquina.</p>
+<p>Ramos inteiros de aprendizado de máquina e teoria de aprendizagem profunda foram dedicados à otimização de modelos. Normalmente, pensamos na otimização de modelos como um processo de modificação regular do código do modelo para minimizar o erro de teste. No entanto, a otimização da aprendizagem profunda geralmente envolve elementos de ajuste fino que vivem fora do modelo, mas que podem influenciar fortemente seu comportamento. Esses elementos, os hiperparâmetros, são um dos componentes mais críticos de qualquer aplicativo de aprendizado de máquina.</p>
+<p>Apesar desse desafio imposto, acredito que foi obtido um modelo muito bom de detecção do Modo de Transporte com a utilização de dados provenientes dos sensores de telefones celulares.</p>
 
 ### Melhorias
-Nesta seção, você deverá discutir como um aspecto da sua implementação poderia ser melhorado. Por exemplo, considere maneiras de tornar a sua implementação mais geral e o que precisaria ser modificado. Você não precisa fazer a melhoria, mas as possíveis soluções que resultariam de tais mudanças devem ser consideradas e comparadas/contrastadas com a sua solução atual. Questões para se perguntar ao escrever esta seção:
-- _Existem melhorias futuras que podem ser feitas nos algoritmos ou técnicas que você usou neste projeto?_
-- _Existem algoritmos ou técnicas que você pesquisou, porém não soube como implementá-las, mas consideraria usar se você soubesse como?_
-- _Se você usou sua solução final como nova referência, você acredita existir uma solução ainda melhor?_
+<p>Limitado pelas questões de tempo e recursos, os modelos foram testados até 80 épocas. Avaliando os Boxplot, acredito que mais épocas para o aprendizado dos modelos poderiam trazer uma performance ainda melhor.</p>
+<p>Outra questão que pode ser melhorada é a implementação das RNNs. As variaçães nas performances com o ajuste do seus hiperparâmetros não foram tão perceptíveis quanto o que foi observado com as CNNs.</p>
 
 -----------
 
-**Antes de enviar, pergunte-se. . .**
+**Referências**
 
-- _O relatório de projeto que você escreveu segue uma estrutura bem organizada, similar ao modelo do projeto?_
-- Cada seção (particularmente **Análise** e **Metodologia**) foi escrita de maneira clara, concisa e específica? Existe algum termo ou frase ambígua que precise de esclarecimento?
-- O público-alvo do seu projeto será capaz de entender suas análises, métodos e resultados?
-- Você revisou seu relatório de projeto adequadamente, de forma a minimizar a quantidade de erros gramaticais e ortográficos?
-- Todos os recursos usados neste projeto foram corretamente citados e referenciados?
-- O código que implementa sua solução está legível e comentado adequadamente?
-- O código é executado sem erros e produz resultados similares àqueles reportados?
+- http://cs.unibo.it/projects/us-tm2017/index.html
+- https://medium.com/@erikhallstrm/hello-world-rnn-83cd7105b767
+- https://www.tensorflow.org/tutorials/estimators/cnn
+- https://machinelearningmastery.com/deep-learning-models-for-human-activity-recognition/
+- https://machinelearningmastery.com/cnn-models-for-human-activity-recognition-time-series-classification/
+- https://machinelearningmastery.com/how-to-develop-rnn-models-for-human-activity-recognition-time-series-classification/
+- https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
