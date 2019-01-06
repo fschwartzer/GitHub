@@ -286,6 +286,15 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 ### Modelo de avaliação e validação
 <p>Ao longo do projeto foram testados um total de 8 modelos, 6 utilizando a base de dados com janela de 5 segundos e 2 utilizando a janela de 0.5 segundos.</p>
 <p>O modelo que obteve a melhor performance e que aqui será discutido utilizou Redes Neurais por Convolução com a base de dados utilizando dados de 9 sensores e janela de 0.5 segundos.</p>
+<p>São apresentados a seguir os resultados dos testes com alguns parâmetros:</p>
+<p><strong>Epochs</strong></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/epochs.png" | width=900 /></p>
+<p><strong>Batch Size</strong></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/batch size.png" | width=900 /></p>
+<p><strong>Filters</strong></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/filters.png" | width=900 /></p>
+<p><strong>Kernel</strong></p>
+<p><img src= "https://github.com/fschwartzer/Udacity-Machine-Learning-Nanodegree/blob/master/Capstone/kernel.png" | width=900 /></p>
 
 Nesta seção, o modelo final e quaisquer qualidades que o sustentem devem ser avaliadas em detalhe. Deve ficar claro como o modelo final foi obtido e por que tal modelo foi escolhido. Além disso, algum tipo de análise deve ser realizada para validar a robustez do modelo e sua solução, como, por exemplo, manipular os dados de entrada ou o ambiente para ver como a solução do modelo é afetada (técnica chamada de análise sensitiva). Questões para se perguntar ao escrever esta seção:
 - _O modelo final é razoável e alinhado com as expectativas de solução? Os parâmetros finais do modelo são apropriados?_
