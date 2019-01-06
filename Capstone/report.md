@@ -238,8 +238,18 @@ Ao expandir o conjunto de dados adicionando todos os outros sensores relevantes,
 <p>A amostra de pontuações pode ser resumida calculando e relatando a média e o desvio padrão do desempenho. A média fornece a precisão média do modelo no conjunto de dados, enquanto o desvio padrão fornece a variância média da precisão da média.</p>
 
 <li><strong>RNNs</strong></li>
-<p>
-  
+<p>Inicialmente foi definida uma função evaluate_model(), que utiliza os dados de treino e teste, ajusta um modelo no conjunto de dados de treinamento, avalia-o no conjunto de dados de teste e retorna uma estimativa do desempenho do modelo.</p>
+<p>Foi definido um modelo LSTM usando a biblioteca de aprendizagem profunda Keras, tendo uma única camada oculta.</p>
+<p>Em seguida, uma camada de dropout destinada a reduzir o overfitting do modelo para os dados de treinamento.</p>
+<p>Finalmente, uma camada densa totalmente conectada é usada para interpretar os recursos extraídos pela camada oculta do LSTM, antes que uma camada de saída final seja usada para fazer previsões.</p>
+<p>O modelo é ajustado para um número fixo de épocas, neste caso 15, e um tamanho de lote de 64 amostras será usado, onde 64 janelas de dados serão expostas ao modelo antes que os pesos do modelo sejam atualizados.</p>
+<p>Ajustado o modelo, ele é avaliado no conjunto de dados de teste e a precisão é retornada.</p>
+<p>Entretanto, assim como nas CNNs, não podemos julgar a habilidade do modelo a partir de uma única avaliação.</p>
+<p>A razão disso é que as redes neurais são estocásticas, o que significa que um modelo específico diferente resultará ao treinar a mesma configuração de modelo nos mesmos dados.</p>
+<p>Esta é uma característica da rede na medida em que dá ao modelo sua capacidade adaptativa, mas requer uma avaliação um pouco mais complexa do modelo.</p>
+<p>A avaliação do modelo é repetida várias vezes e, em seguida, é resumido o desempenho do modelo em cada uma dessas execuções. Por exemplo, pode ser chamado evaluate_model () um total de 10 vezes. Isso resultará em uma população de pontuações de avaliação de modelo que devem ser resumidas.</p>
+<p>A amostra de pontuações pode ser resumida calculando e relatando a média e o desvio padrão do desempenho. A média fornece a precisão média do modelo no conjunto de dados, enquanto o desvio padrão fornece a variância média da precisão da média.</p>
+
 ### Refinamento
 Nesta seção, você deverá discutir o processo de aperfeiçoamento dos algoritmos e técnicas usados em sua implementação. Por exemplo, ajuste de parâmetros para que certos modelos obtenham melhores soluções está dentro da categoria de refinamento. Suas soluções inicial e final devem ser registradas, bem como quaisquer outros resultados intermediários significativos, conforme o necessário. Questões para se perguntar ao escrever esta seção:
 - _Uma solução inicial foi encontrada e claramente reportada?_
