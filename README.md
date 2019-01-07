@@ -6,3 +6,5 @@ Trabalhos realizados no Nanodegree Engenheiro de Machine Learning da Udacity.
 - Aprendizagem Não Supervisionada: Customer Segments
 
 - Aprendizagem por Reforço: Quadcopter Project
+
+- Capstone: 
