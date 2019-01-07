@@ -7,4 +7,4 @@ Trabalhos realizados no Nanodegree Engenheiro de Machine Learning da Udacity.
 
 - Aprendizagem por Reforço: Quadcopter Project
 
-- Capstone: 
+- Capstone: Detecção do Modo de Transporte com modelos de Redes Neurais por Convolução (CNN) e modelos de Redes Neurais Recorrentes (RNN)
